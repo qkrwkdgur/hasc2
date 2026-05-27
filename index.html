@@ -1,0 +1,5006 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-store" />
+		<meta http-equiv="Expires" content="-1" />
+		
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<link rel="manifest" href="/HS.manifest"/>
+		
+		<title>한신대학교 교수학습지원센터 (6)</title>
+		
+		
+		
+		
+
+
+ 
+
+<!-- ########################### UI Component Import ############################-->
+<script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.serialize-object.min.js"></script>
+<link type="text/css" href="/css/jquery-ui-1.12.1.min.css" rel="stylesheet" />
+
+<script type="text/javascript" src="/js/lodash.js"></script>
+<script src="/js/mathjax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		"MathML": {
+    		extensions: ["mml3.js"]
+  		},
+		"HTML-CSS": {
+    		imageFont: null
+  		}
+	});
+</script>
+
+<link type="text/css" href="/js/framework/ui/slick/slick.css" rel="stylesheet" />
+<link type="text/css" href="/js/framework/ui/slick/slick-theme.css" rel="stylesheet" />
+<script type="text/javascript" src="/js/framework/ui/slick/slick.min.js"></script>
+
+<script type="text/javascript" src="/js/framework/ui/marquee/jquery.marquee.min.js"></script>
+
+<link href="/js/framework/videojs/video-js.min.css" rel="stylesheet">
+<script src="/js/framework/videojs/video.min.js?v=8.22"></script>
+
+<script type="text/javascript" src="/js/jquery.scrollbar.min.js"></script>
+<link type="text/css" href="/css/jquery.scrollbar.css" rel="stylesheet" />
+
+<script type="text/javascript" src="/js/framework/ui/daterangepicker/ui.datepicker-ko.js" ></script>
+
+<!-- table drag and drop -->
+<script type="text/javascript" src="/js/framework/ui/tablednd/jquery.tablednd_0_5.js" ></script>
+
+<script type="text/javascript" src="/js/framework/util/util.alphanumeric-min.js" ></script>
+<script type="text/javascript" src="/js/framework/util/util.download.js" ></script>
+<script type="text/javascript" src="/js/framework/util/util.hashmap.js" ></script>
+
+<script type="text/javascript" src="/js/framework/util/util.json-min.js" ></script>
+<script type="text/javascript" src="/js/framework/util/util.easy.validate.js" ></script>
+<script type="text/javascript" src="/js/framework/util/util.easy.validate-message.js" ></script>
+<script type="text/javascript" src="/js/framework/util/util.fullcalendar.js" ></script>
+
+<link href="/js/framework/ui/tabulator/dist/css/tabulator.min.css?v=5.2" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/framework/ui/tabulator/dist/js/tabulator.min.js?v=5.2"></script>
+<script type="text/javascript" src="/js/framework/ui/tabulator/dist/js/jquery_wrapper.js?v=5.2"></script>
+<script type="text/javascript" src="/js/framework/ui/tabulator/dist/js/luxon.min.js"></script>
+<script type="text/javascript" src="/js/framework/ui/tabulator/dist/js/jspdf.umd.min.js?v=2.4"></script>
+<script type="text/javascript" src="/js/framework/ui/tabulator/dist/js/jspdf.plugin.autotable.js?v=3.5.25"></script>
+
+<script type="text/javascript" src="/js/front/dunet.js?v=202012211130"></script>
+<script type="text/javascript" src="/js/front/dunetZoomV2.js?v=202204121700" ></script>
+<script type="text/javascript" src="/js/front/dunetTabulator.js?v=202105251751"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css" rel="stylesheet"/>
+
+<!-- print -->
+<script type="text/javascript" src="/js/jquery.printElement.min.js"></script>
+
+<!-- Uploadifive -->
+<script>
+	var _buttonText = "파일을 드래그하여 첨부할 수 있습니다.";
+	var _exept_file_type = "::inc::java::js::jsp::php::py::rb::sh::ts::";
+</script>
+<script type="text/javascript" src="/js/framework/uploadifive-v1.2.2-commercial/jquery.uploadifive.js?v=202503131849" ></script>
+<script type="text/javascript" src="/js/framework/ui/swipe.min.js"></script>
+<link href="/js/framework/uploadifive-v1.2.2-commercial/uploadifive.css?v=202104011753" rel="stylesheet" type="text/css" media="all" />
+
+<link href="/css/front/base.css?v=202505020957" rel="stylesheet" type="text/css" />
+<link href="/css/front/common_board.css?v=202507311643" rel="stylesheet" type="text/css" />
+<link href="/css/front/dunet.css" rel="stylesheet" type="text/css" />
+
+<script src="/js/framework/flow/Nimbus_flow.js"></script>
+<link href="/js/framework/flow/Nimbus_flow.css" rel="stylesheet" type="text/css"/>
+
+<link type="text/css" href="/js/framework/baguetteBox/baguetteBox.min.css" rel="stylesheet" />
+<script type="text/javascript" src="/js/framework/baguetteBox/baguetteBox.min.js"></script>
+
+
+	 <!-- CTL -->
+		
+		<link href="/css/HS/ctl.css?v=20240328180000" rel="stylesheet" type="text/css" />
+		<link href="/css/HS/ctl_contents.css?v=202407250220" rel="stylesheet" type="text/css" />
+	
+	
+
+
+<link href="/font/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="/js/common.js?v=202104121021"></script>
+
+<script src="/js/framework/vimeo/player.min.js"></script>
+
+<!-- Tree -->
+<link href="/js/framework/ui/jstree_3.3.12/default/style.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/framework/ui/jstree_3.3.12/jstree.min.js" ></script>
+
+<script src="/js/jquery.browser.js"></script>
+
+
+
+
+	
+	
+		<script src="/js/framework/ui/vue/vue.global.prod.min.js"></script>
+	
+
+
+<style>
+/* 로딩이미지 */
+.loading_modal {display:table; width:100%; height:100%; height:100vh; background-color:rgba(255,255,255,0.8); position:fixed; top:0; left:0; z-index:1001;}
+.loading_modal .loading_info {display:table-cell; vertical-align:middle; text-align:center;}
+.loading_modal .loading_info .loading_img {}
+.loading_modal .loading_info span.loading_msg {display:inline-block; padding:5px 10px 3px; line-height:1.2; color:#333; font-size:12px; border:solid 1px #999; background-color:#fff; -webkit-border-radius:5px; -moz-border-radius:5px; -o-border-radius:5px; border-radius:5px;}
+</style>
+
+<script type="text/javascript">//<![CDATA[   
+
+	function getUUID() { // UUID v4 generator in JavaScript (RFC4122 compliant)
+	  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+	    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 3 | 8);
+	    return v.toString(16);
+	  });
+	}
+	
+	//날짜포맷
+	Date.prototype.format = function(f) {
+	    if (!this.valueOf()) return " ";
+
+	    var week = ["일",
+					"월",
+					"화",
+					"수",
+					"목",
+					"금",
+					"토"];
+	 
+	    var weekName = ["일요일",
+	    				"월요일",
+	    				"화요일",
+	    				"수요일",
+	    				"목요일",
+	    				"금요일",
+	    				"토요일"];
+	    var d = this;
+	     
+	    return f.replace(/(yyyy|yy|MM|dd|E|hh|mm|ss|a\/p)/gi, function($1) {
+	        switch ($1) {
+	            case "yyyy": return d.getFullYear();
+	            case "yy": return (d.getFullYear() % 1000).zf(2);
+	            case "MM": return (d.getMonth() + 1).zf(2);
+	            case "dd": return d.getDate().zf(2);
+	            case "E": return weekName[d.getDay()];
+	            case "HH": return d.getHours().zf(2);
+	            case "hh": return ((h = d.getHours() % 12) ? h : 12).zf(2);
+	            case "mm": return d.getMinutes().zf(2);
+	            case "ss": return d.getSeconds().zf(2);
+	            case "a/p": return d.getHours() < 12 ? "오전" : "오후";
+	            // newfrom 1224 추가 
+	            case "e" : return week[d.getDay()];
+	            default: return $1;
+	        }
+	    });
+	};
+	 
+	String.prototype.string = function(len){var s = '', i = 0; while (i++ < len) { s += this; } return s;};
+	String.prototype.zf = function(len){return "0".string(len - this.length) + this;};
+	Number.prototype.zf = function(len){return this.toString().zf(len);};
+		
+	
+	window.addEventListener('storage', function (e) {
+		var isIE = false;
+		var userAgent = window.navigator.userAgent.toLowerCase();
+		if(userAgent.indexOf('trident') != -1){
+			var isIE = true;	//ie 구분
+		}
+		
+		var newValue = (typeof e.newValue === 'string') ? e.newValue : JSON.parse(e.newValue);
+		var oldValue = (typeof e.oldValue === 'string') ? e.oldValue : JSON.parse(e.oldValue);
+			
+		if(isIE && e.key == "course_id" && newValue == "undefined" && oldValue != "undefined" && localStorage.getItem("course_id")){
+			if(window.location.pathname.indexOf('/lms/class/survey/apply/doFormAdd.dunet') == -1 && window.location.pathname.indexOf('/lms/myLecture/doListView.dunet') == -1 && window.location.pathname.indexOf('/lms/message/') == -1 && "" != "MENUTARGET_J"){
+				fncShowWait("강의실 메인으로 이동합니다.");
+				setTimeout(function(){
+					top.location.href = "/lms/myLecture/doListView.dunet";
+				},1000);
+			}
+		}else if(!isIE && e.key == "course_id" && newValue == "undefined" && oldValue != "undefined"){
+			if(window.location.pathname.indexOf('/lms/class/survey/apply/doFormAdd.dunet') == -1 && window.location.pathname.indexOf('/lms/myLecture/doListView.dunet') == -1 && window.location.pathname.indexOf('/lms/message/') == -1 && "" != "MENUTARGET_J"){
+				fncShowWait("강의실 메인으로 이동합니다.");
+				setTimeout(function(){
+					top.location.href = "/lms/myLecture/doListView.dunet";
+				},1000);
+			}
+		}else if(isIE && e.key == "course_id" && e.storageArea.course_id != newValue) {
+			fncShowWait("강의가 변경되었습니다.");
+			setTimeout(function(){
+				top.location.href = "/lms/class/classroom/doViewClassRoom.dunet";
+			},1000);
+		}else if(!isIE && e.key == "course_id" && oldValue != newValue) {
+			fncShowWait("강의가 변경되었습니다.");
+			setTimeout(function(){
+				top.location.href = "/lms/class/classroom/doViewClassRoom.dunet";
+			},1000);
+		}
+	
+	});
+	
+
+	if (false){
+  		
+ 		if (window.location.protocol == "https:") {
+  			var restOfUrl = window.location.href.substr(6);
+  			window.location = "http:" + restOfUrl;
+  		}
+  	}else if (false){
+  		
+  		if (window.location.protocol == "http:") {
+  			var restOfUrl = window.location.href.substr(5);
+  			window.location = "https:" + restOfUrl;
+  		}
+  	}else if (false) {
+		
+		if (window.location.protocol == "http:") {
+			var restOfUrl = window.location.href.substr(5);
+			window.location = "https:" + restOfUrl;
+		}
+ 	} 
+
+
+	history.scrollRestoration = "manual";	
+
+	
+	function gnbMenuWidthSet(){
+		var totalWidth = 100;
+		var gnbNum = $('#gnb ul li').length;
+		var gnbMenuWidth = totalWidth/gnbNum;
+		$('#gnb ul li').width(gnbMenuWidth+"%");
+		$('#gnb ul li dl').hide();
+	};
+	gnbMenuWidthSet();
+
+    function $ajax(obj)
+    {
+    	$.ajax({
+            url: obj.url,
+            type: obj.type,
+            data: obj.data,
+            dataType: obj.dataType,
+            success: function(xhr){
+    	        if (xhr.SESSION == "EXPIRED_SESSION") {
+	                alert("로그인 후 이용하실 수 있습니다.");
+	                top.location='/main/MainView.dunet';
+	            }
+	            else
+	            {
+	            	if ( typeof obj.success != 'undefined' ) obj.success(xhr);
+	            }
+    	        
+    	    },
+    	    error : function(e)
+    	    {
+    	    	if ( typeof obj.error != 'undefined' ) obj.error(e);
+    	    },
+            beforeSend : function(){
+    	    	if ( typeof obj.beforeSend != 'undefined' ) obj.beforeSend();
+    	    },
+            complete: function(){
+                if ( typeof obj.complete != 'undefined' ) obj.complete();
+    	    }
+    	});
+    }   
+	
+	function numCheck(event, _this){
+		var v = $(_this).val();
+		var p = $(_this).data("pattern");
+		var dot = String(p).indexOf(".");
+		var send = event.target.selectionEnd;
+		
+// 		var x = new RegExp('(^\\d{1,'+String(p)+'}$)');
+		
+		if(dot != -1){
+			var num = String(p).split(".");
+// 			x = new RegExp('(^\\d{1,'+num[0]+'}$)|(^\\d{1,'+num[0]+'}.$)|(^\\d{1,'+num[1]+'}.\\d{1,'+num[1]+'}$)');
+			
+			var pos = v.indexOf(".");
+			if(pos == -1){
+				if(v.length >= num[0]){
+					$(_this).val(v.substring(0,num[0]));
+					return false;
+				}
+			}else{
+				if(send > pos){
+					var s = v.split(".");
+					if(s[1].length >= num[1]){
+						return false;
+					}
+				}				
+	
+				if(send <= pos){
+					var s = v.split(".");
+					if(s[0].length >= num[0]){
+						return false;
+					}
+				}		
+			}
+			
+		}else{
+			if(v.length >= p){
+				return false;
+			}
+		}
+		
+		return true;
+	}
+
+	$(document).ready(function(){
+		
+		
+		$.each($('input[data-pattern]'),function(index,item){
+			$(item).css("-webkit-ime-mode", "disabled")
+		    .css("-moz-ime-mode", "disabled")
+		    .css("-moz-ime-mode", "disabled")
+		    .css("-ms-ime-mode", "disabled")
+		    .css("ime-mode", "disabled");
+			
+			if(item.dataset.pattern.indexOf(".") == -1){
+				$(item).attr("oninput","this.value = this.value.replace(/[^0-9]/g, '').replace(/(\\..*)\\./g, '$1');");
+			}else{
+				$(item).removeAttr("oninput");
+			}
+			
+			$(item).on("change blur",function(){
+				var v = $(this).val();
+				var p = $(this).data("pattern");
+				var dot = String(p).indexOf(".");
+				if(dot != -1){
+					var num = String(p).split(".");
+					var pos = v.indexOf(".");
+					if(pos == -1){
+						if(v.length >= num[0]){
+							$(this).val(v.substring(0,num[0]));
+						}
+					}
+				}
+				return true;
+				
+			}).on("keydown",function(event){
+				
+				event = event || window.event;
+				
+// 				console.log(event.target.selectionStart +"/"+event.target.selectionEnd);
+				
+				if(event.which && ((event.which  > 46 && event.which  < 58) || (event.which >= 96 && event.which <= 105))) {
+	 			}else if(event.which == 8 || event.which == 37 || event.which == 39 || event.which == 110 || event.which == 190){
+	 				numCheck(event, this);
+	 				return;
+	 			}else{
+	 				return false;
+	 			}
+				
+				return numCheck(event, this);
+			});
+		});
+		
+		
+		$('input').attr('autocomplete','off');	
+
+		
+	    $('.btn_change_info').click(function(event){
+	        event.preventDefault();
+	        fncTempFormSubmit({
+	            param : {
+	            	mnid : "201008231963"
+	                    },
+	            url : '/lms/front/member/info/doFormMemberInfo.dunet'
+	        });
+	    });
+	    
+	    
+	    $('#btn_my_page').click(function(event){
+	        event.preventDefault();
+	        fncTempFormSubmit({
+	            param : {
+	            	mnid : "201008840728"
+	                    },
+	            url : '/lms/myLecture/doListView.dunet'
+	        });
+	    });
+		
+		
+        $('a[name=a_language]').click(function(event){
+        	event.preventDefault();
+            $.ajax({
+                url: '/main/doChangeLocale.dunet',
+                type: "post",
+                data: { language : $(this).attr('id')},
+                dataType: "json",
+                success: function(transport){
+                	fncPageReload();
+                },
+                error : function(){
+                    alert("오류가 발생하였습니다. 관리자에게 문의해주세요");
+                }
+            });
+        });
+        
+        $('select[name=s_language]').on("change",function(){
+            $.ajax({
+                url: '/main/doChangeLocale.dunet',
+                type: "post",
+                data: { language : $(this).val()},
+                dataType: "json",
+                success: function(transport){
+                	fncPageReload();
+                },
+                error : function(){
+                    alert("오류가 발생하였습니다. 관리자에게 문의해주세요");
+                }
+            });
+        });
+
+		
+		$('#l_popup_content, #popup_content, .pop_body').bind("MutationObserver",function(){
+        	fncShowPopupSize($(".l_popup"));
+        });
+        
+		
+		var showPopupResize;
+		var defaultshow = $.fn.show;
+		$.fn.show = function(){
+			if($(this).attr("id") != undefined && !$(this).hasClass('l_popup_board') && $(this).find("iframe").length == 0 && ($(this).attr("class") == "l_popup" || $(this).hasClass("l_popup"))){
+				var _this = this;
+				$(this).each(function() {
+					var args = function(){
+						if(showPopupResize !== undefined){
+							$(window).off("resize touchend", showPopupResize);
+						}
+						showPopupResize = fncShowPopupSize.bind(null, _this);
+						$(window).on("resize touchend", showPopupResize);
+						showPopupResize();
+					};
+					return defaultshow.apply(_this, [0, args]);
+				});
+			}
+			return defaultshow.apply(this, arguments);
+
+	    };
+		
+		
+		var exam_answer_check = 0;
+		$('.btn_exam_menu_view').click(function(){
+			// $('.exam_answer').toggle();
+			if(exam_answer_check == 0){
+				$('.exam_answer').css("display","table-cell");
+				exam_answer_check = 1;
+			}else if (exam_answer_check == 1){
+				$('.exam_answer').css("display","none");
+				exam_answer_check = 0;
+			}
+			
+			$(this).toggleClass('active');
+			return false;
+		});
+		
+		
+		var selfInfoCount=0;
+		var selfAreaCom = $('#selfAreaCom .actArea');
+		var selfInfoTop = $('.selfInfo .top');
+		$('.btn-selfAreaCom-toggle').click(
+			function(){
+				if(selfInfoCount == 0){						
+					selfInfoTop.removeClass('top');
+					selfInfoTop.addClass('top2');
+					selfAreaCom.animate({height:32},100);
+					$(this).text('+');
+					selfInfoCount=1;
+				}
+				else if(selfInfoCount == 1) {
+					selfInfoTop.removeClass('top2');
+					selfInfoTop.addClass('top');
+					// selfAreaCom.css({"height":"125"});
+					selfAreaCom.animate({height:175},300);
+					$(this).text('-');
+					selfInfoCount=0;
+				};
+				return false;
+			}
+		);
+		
+		
+		var loginInputPlaceholder;
+		$('.beforeLogin input').focus(function(){
+			loginInputPlaceholder = $(this).attr("value");
+			$(this).attr("value","");
+		})/*.blur(function(){
+			$(this).attr("value",loginInputPlaceholder);
+		})*/;
+		
+		$('#gnb ul li').hover(
+			function(){
+				var sib = $(this).children('dl');
+				sib.show().css("opacity",0).stop().animate({opacity:1}, 100);
+			},
+			function(){
+				var sib = $(this).children('dl');
+				sib.hide();
+			}
+		);
+
+		
+    	$('.btn_menu_link').on("click", function(event){
+            event.preventDefault();
+            
+            
+            $(this).off("click");
+            
+            var targetObj;
+            
+            if ( $('ul',$(this).parent()).size() > 0 && $(this)?.attr("href").indexOf("/lms/myLecture/doListView.dunet")==-1 ){
+                targetObj = $('ul > li:eq(0) > a',$(this).parent());
+            }
+            else {
+                targetObj = $(this);
+            }
+            fncTempFormSubmit({                           
+                param : fncGetTempObj(targetObj),
+                //url : targetObj.attr('id')
+                url : targetObj.attr('href')            
+            });
+        });
+    	
+    	
+        $('.btn_admin_menu_link').click(function(event){
+            event.preventDefault();
+            fncSubmitGetToPost($(this).attr('id'))
+        });
+		
+
+    	
+    	$('.btn_learning_course').click(function(){
+    		$('.learning_course').toggle();
+    		$(this).toggleClass('active');
+    		return false;
+    	});
+    	
+    	
+		
+		$(document.body).ajaxStart(function(){
+		}).ajaxSend(function( event, request, settings ) {
+		}).ajaxComplete(function(ev, xhr, s) {
+			try {
+				var responseObj = $.evalJSON(xhr.responseText); 
+				
+				if (responseObj.SESSION == "EXPIRED_SESSION") {
+					alert("로그인 후 이용하실 수 있습니다.");
+					top.location='/main/MainView.dunet';
+				} else if (responseObj.SESSION == "EXPIRED_SESSION_EXAM") {
+					//fncSessionAlert("로그인 후 이용하실 수 있습니다.");
+					alert("로그인 후 이용하실 수 있습니다.");
+					top.location='/main/MainView.dunet';
+				}
+				
+				var errorMessage = responseObj.ERROR_MSG;
+				
+				if (errorMessage != '' && typeof errorMessage != "undefined") {
+					alert(errorMessage);
+				}
+			}
+			catch(e) {
+				//alert("error : " + e);
+			}
+		});
+
+		 
+		$('input:text, input:password').keydown(function(event) {
+          if (event.keyCode == 13) {
+              event.preventDefault();
+          }
+      });
+		
+		addOnlyNumberInputEvent();
+		
+	});
+	
+	
+	function addOnlyNumberInputEvent(){
+		$(".onlyNumberInput").off("keyup");
+		$(".onlyNumberInput").on("keyup", function(e){
+		   
+		   $(this).val($(this).val().replace(/^[.]/g, '').replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(\.\d{2}).+/g, '$1'));
+		});
+		
+		$(".onlyIntegerInput").off("keyup");
+		$(".onlyIntegerInput").on("keyup", function(e){
+		   
+		   $(this).val($(this).val().replace(/[^0-9]/g, ''));
+		});
+	}
+	
+	
+	function chatOpen(url){
+
+		$('#common_dialog').dialog({
+				title: 		'채팅',
+				bgiframe: 	false,
+		        autoOpen: 	false,
+		        width:		734,
+           		height:		492,
+				modal: 		true,
+				draggable: true,
+				resizable:  false,
+		        open: function() {
+					$('#popcontent').height($(this).height()-10);
+					$('#popcontent').width($(this).width()-10);
+					$('#popcontent').attr('scrolling', 'no');
+					//$(".ui-dialog-titlebar").hide();
+				},
+		        resize: function() {
+					$('#popcontent').hide();
+				},
+		        resizeStop: function() {
+					$('#popcontent').show();
+					$('#popcontent').height($(this).height()-10);
+					$('#popcontent').width($(this).width()-10);
+				},
+				close: function(){
+					$('#popcontent').attr('src','');
+					$('#common_dialog').dialog('destroy');
+				}
+		});
+		
+		$('#fnc_return').val('');
+
+		
+		$('#popcontent').attr({src: url}).show();
+		$('#common_dialog').dialog("open");
+	}
+	
+	
+	function dialogOpen(options){
+		
+		$('#common_dialog').dialog({
+				title: 		options.title,
+				bgiframe: 	true,
+		        autoOpen: 	false,
+		        width:		options.width,
+           		height:		options.height,
+				modal: 		typeof options.modal == 'undefined' ? true : options.modal ,
+				resizable:  true,
+		        open: function() { 
+					$('#popcontent').height($(this).height()+20); 
+					$('#popcontent').width($(this).width()-10); 
+					$('.ui-dialog .ui-dialog-content').css('overflow','hidden');
+				},
+		        resize: function() { 
+					$('#popcontent').hide(); 
+				},
+		        resizeStop: function() { 
+					$('#popcontent').show();
+					$('#popcontent').height($(this).height()+20);  
+					$('#popcontent').width($(this).width()-10); 
+				},
+				close: function(){
+					$('#popcontent').attr('src','');
+					$('#common_dialog').dialog('destroy');
+				} 
+		}); 
+							
+		
+		if (options.fnc_return == undefined) {
+			$('#fnc_return').val('')
+		}else{
+			$('#fnc_return').val(options.fnc_return);	
+		}
+		
+		
+		$('#popcontent').attr({src: options.url}).show();
+		$('#common_dialog').dialog("open");
+	}
+	
+	function dialogOpenA(options){
+		
+		$('#common_dialog').dialog({
+				title: 		options.title,
+				bgiframe: 	true,
+		        autoOpen: 	false,
+		        width:		options.width,
+           		height:		options.height,
+				modal: 		typeof options.modal == 'undefined' ? true : options.modal ,
+				resizable:  true,
+		        open: function() { 
+					$('#popcontent').height($(this).height()+20); 
+					$('#popcontent').width($(this).width()-10); 
+					$('.ui-dialog-titlebar').hide();
+					$('.ui-dialog .ui-dialog-content').css('overflow','hidden');
+				},
+		        resize: function() { 
+					$('#popcontent').hide(); 
+				},
+		        resizeStop: function() { 
+					$('#popcontent').show();
+					$('#popcontent').height($(this).height()+20);  
+					$('#popcontent').width($(this).width()-10); 
+				},
+				close: function(){
+					$('#popcontent').attr('src','');
+					$('#common_dialog').dialog('destroy');
+				} 
+		}); 
+							
+		
+		if (options.fnc_return == undefined) {
+			$('#fnc_return').val('')
+		}else{
+			$('#fnc_return').val(options.fnc_return);	
+		}
+		
+		
+		$('#popcontent').attr({src: options.url}).show();
+		$('#common_dialog').dialog("open");
+	}
+	
+	
+	function dialogOpen2(options){		
+		$('#common_dialog2').dialog({
+				title: 		options.title,
+				bgiframe: 	true,
+		        autoOpen: 	false,
+		        width:		options.width,
+           		height:		options.height,
+				modal: 		typeof options.modal == 'undefined' ? true : options.modal ,
+				resizable:  false,
+		        open: function() { 
+					$('#popcontent2').height($(this).height()); 
+					$('#popcontent2').width($(this).width()-10); 
+					$('.ui-dialog .ui-dialog-content').css('overflow','hidden');
+				},
+		        resize: function() { 
+					$('#popcontent2').hide(); 
+				},
+		        resizeStop: function() { 
+					$('#popcontent2').show();
+					$('#popcontent2').height($(this).height());  
+					$('#popcontent2').width($(this).width()-10); 
+				},
+				close: function(){
+					$('#popcontent2').attr('src','');
+					$('#common_dialog2').dialog('destroy');
+				} 
+		}); 
+							
+		
+		if (options.fnc_return == undefined) {
+			$('#fnc_return').val('')
+		}else{
+			$('#fnc_return').val(options.fnc_return);	
+		}
+		
+		
+		
+		$('#popcontent2').attr({src: options.url}).show();
+		$('#common_dialog2').dialog("open");
+		
+		
+	}
+	
+	
+	function dialogClose(){
+		
+		var fnc_return = $('#fnc_return').attr('value');
+		
+		eval(fnc_return);
+		
+		$('#popcontent').attr('src','');
+		$('#common_dialog').dialog('destroy');
+	}	
+	
+	
+	function dialogCancel(){
+		$('#common_dialog').dialog('destroy');
+		$('#common_dialog2').dialog('destroy');		
+	}
+	
+	
+    function $Select(sid, qid, param_array, selectValue, callback) {
+        //while(sid.length>1) sid.remove(sid.length-1);
+        $.ajax({
+            url     : "/lms/common/select/doListSelect.dunet",
+            type    : "post",
+            data    : {"qid" : qid, "param" : param_array},
+            dataType: "json",
+            success : function(transport){
+                var rows = transport.rows;
+                
+                var option = "";
+                
+                for (var titleIndex = 0; titleIndex < rows.length; titleIndex++) {
+                    
+//                  option = '<option value='+rows[titleIndex].value+' >'+rows[titleIndex].title+'</option>';   
+
+                    if( selectValue == rows[titleIndex].value  ){
+                        option = '<option value='+rows[titleIndex].value+' selected >'+rows[titleIndex].title+'</option>';                      
+                    }else{
+                        option = '<option value='+rows[titleIndex].value+' >'+rows[titleIndex].title+'</option>';                       
+                    }
+                    
+                    $('#'+sid).append(option);
+                    //sid.options.add(new Option(rows[titleIndex].title,rows[titleIndex].value));
+
+                }
+
+                if ( typeof callback != "undefined") {
+                    eval(callback+';');
+                }
+            }
+        });
+    }
+    
+    function $Radio(radioObj) {
+
+    	$('#'+radioObj["parentObjId"]).html('');
+
+        $.ajax({
+            url     : "/lms/common/select/doListSelect.dunet",
+            type    : "post",
+            data    : {"qid" : radioObj["qid"] , "param" : radioObj["param_array"]},
+            dataType: "json",
+            success : function(transport){
+                var rows = transport.rows;
+                
+                var option = "";
+                var fncOnChange = typeof radioObj["fncOnChange"] != "undefined" ? "onClick='"+radioObj["fncOnChange"]+"'" : "";
+                
+                for (var titleIndex = 0; titleIndex < rows.length; titleIndex++) {
+                    
+                    var classStr = "";
+                    var requiredStr = "";
+                    var checkStr = "";
+                    
+                    if ( radioObj["isRequired"] == true ) {
+                    	classStr += "class='required'";
+                    	requiredStr = "inputName='"+radioObj["inputName"]+"'";
+                    }
+
+                    if( typeof radioObj["selectValue"] != "undefined" && radioObj["selectValue"] == rows[titleIndex].value  )
+                    {
+                    	checkStr = "checked";
+                    }
+
+                    option = '<input type="radio" name="'+radioObj["paramName"]+'" value='+rows[titleIndex].value+' '+ classStr +' '+ fncOnChange +' '+ requiredStr +'  '+ checkStr +' >'+rows[titleIndex].title+'</option>';
+                    
+                    $('#'+radioObj["parentObjId"]).append(option);
+                }
+
+                if ( typeof radioObj["selectValue"] != "undefined" && radioObj["selectValue"] == "" ) 
+                {
+                    $('input[name='+radioObj["paramName"]+']:eq(0)').attr("checked", true);
+                } 
+
+                if ( typeof radioObj["callback"] != "undefined") 
+                {
+                    radioObj["callback"]();
+                }
+
+               
+            }
+        });
+    }
+
+    
+    function $CheckBox(checkBoxObj) {
+
+    	$('#'+checkBoxObj["parentObjId"]).html('');
+
+        var url = "";
+        var params = {};
+
+        if ( typeof checkBoxObj["url"] == 'undefined' )
+        {
+            url = "/lms/common/select/doListSelect.dunet";
+            params = {"qid" : checkBoxObj["qid"] , "param" : checkBoxObj["param_array"]};
+        }
+        else
+        {
+            url = checkBoxObj["url"];
+            if ( typeof checkBoxObj["params"] != 'undefined' ) 
+                params = checkBoxObj["params"]; 
+        }
+        
+        $.ajax({
+            url     : url,
+            type    : "post",
+            data    : params,
+            dataType: "json",
+            success : function(transport){
+                var rows = transport.rows;
+                
+                var option = "";
+                
+                for (var titleIndex = 0; titleIndex < rows.length; titleIndex++)
+                {
+                    var classStr = "";
+                    var checkStr = "";
+                    var requiredStr = "";
+                    var disabled = "";
+
+                    if ( checkBoxObj["isRequired"] == true ) {
+                        classStr += "class='required'";
+                        requiredStr = "inputName='"+checkBoxObj["inputName"]+"'";
+                    }
+
+                    if ( checkBoxObj["isDisabled"] == true ) {
+                    	disabled += " disabled";
+                    }
+
+                    if ( typeof checkBoxObj["selectValue"] != "undefined" && checkBoxObj["selectValue"].indexOf(rows[titleIndex].value) > -1 ) {
+                    	checkStr = "checked";
+                    }
+                    
+                    option = '<input type="checkbox" name="'+checkBoxObj["paramName"]+'" value='+rows[titleIndex].value+' '+ classStr +' '+ disabled +' '+ requiredStr +' ' +checkStr +' >'+rows[titleIndex].title+'</option>';             
+	                        
+
+                    var tempDiv = $('<div style="float:left;width:'+checkBoxObj["width"]+'px;"></div>').append(option)
+                    
+                    $('#'+checkBoxObj["parentObjId"]).append(tempDiv);
+
+                }
+
+                if ( typeof checkBoxObj["callback"] != "undefined") {
+                	checkBoxObj["callback"]();
+                }
+
+               
+            },
+            error : function(){
+             alert("CheckBox 로딩 중 에러 발생."+checkBoxObj["parentObjId"]);   
+            }
+        });
+    }
+	
+    
+	function commonWhenEnterKey(inputID, buttonID) {
+		$('#'+inputID).keydown(function(event) {
+			if (event.keyCode == 13) {
+				event.preventDefault();
+				$('#'+buttonID).click();
+			}
+		});
+	}
+
+	
+    function onlyNumberStyle(inputID) {
+        $('.'+inputID).keydown(function(event){
+        	event = event || window.event;
+       	    var keyID = (event.which) ? event.which : event.keyCode;
+       	    if ( (keyID >= 48 && keyID <= 57) || (keyID >= 96 && keyID <= 105) || keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39) 
+       	        return;
+       	    else
+       	        return false;
+		  		  
+		});
+        
+        $('.'+inputID).keyup(function(event){
+        	event = event || window.event;
+            var keyID = (event.which) ? event.which : event.keyCode;
+            if (keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39 ) 
+                return;
+            else
+        		event.target.value = event.target.value.replace(/[^0-9]/g, "")
+        });
+    }
+    
+    
+	function onlyFloatStyle(inputID) {
+        $('.'+inputID).keypress(function(event){
+		  if (event.which && (event.which  > 46 && event.which  < 58 || event.which == 8 || event.which == 110 || event.which == 190)) {
+		  } 
+		  else if ( isNaN($(this).val())) {
+			  event.preventDefault();
+		  }
+		  else {
+		    event.preventDefault();
+		  }
+		});
+
+    }
+	
+	
+    function onlyNumberStyle2(inputID) {
+        $('.'+inputID).keypress(function(event){
+          if (event.which && (event.which  > 44 && event.which  < 58 || event.which == 8)) {
+          } 
+          else if ( isNaN($(this).val())) {
+              event.preventDefault();
+          }
+          else {
+            event.preventDefault();
+          }
+        });
+    }
+    
+    function imgover(imgs) {
+        imgs.src = imgs.src.replace("off.gif", "on.gif");
+    }
+    function imgout(imgs) {
+        imgs.src = imgs.src.replace("on.gif", "off.gif");
+    }
+
+	
+	function fncSiteLink(url) {
+		if(url != "") {
+			location.href = url;
+		}
+	}
+
+	function fncPageReload() {
+		
+		var paramObj = fncGetTempObj($('#frm_reload'));
+		var newParamObj = {};
+		
+		for ( var par in paramObj ) {
+			newParamObj[par.replace('reload_','')] = paramObj[par];
+		}
+		
+		fncTempFormSubmit({                           
+            param : newParamObj,
+            url : $('#frm_reload').attr('action') 
+        });
+		
+	}
+
+	function fncBackToMain() {
+		
+		var paramObj = fncGetTempObj($('#frm_reload'));
+		var newParamObj = {};
+		
+		for ( var par in paramObj ) {
+			newParamObj[par.replace('reload_','')] = paramObj[par];
+		}
+		
+		fncTempFormSubmit({                           
+            param : newParamObj,
+            url : "/"
+        });
+		
+	}
+	
+	
+     function fncTempFormSubmitNewTab(options) {
+      	
+         $('<form id="temp_post_form" name="temp_post_form" method="post"/>').appendTo($('body'));
+         
+         if ( typeof options.param != 'undefined' ) {
+         	for ( var par in options.param ) {
+                 $('<input type="hidden" name="'+par+'" value="'+options.param[par]+'" />').appendTo($('#temp_post_form'));
+             }	
+         }
+         
+         $('#temp_post_form').attr("action", options.url);
+         
+         if ( typeof options.target != 'undefined') {
+             $('#temp_post_form').attr('target', options.target);
+         }
+         
+         var gsWin = window.open("about:blank", "newTab");
+         $('#temp_post_form').attr("target", "newTab");
+         $('#temp_post_form').submit();
+         $('#temp_post_form').remove();
+     }
+     
+    function fncTempFormSubmit(options) {
+    	
+        $('<form id="temp_post_form" name="temp_post_form" method="post"/>').appendTo($('body'));
+        
+        if ( typeof options.param != 'undefined' ) {
+        	for ( var par in options.param ) {
+                $('<input type="hidden" name="'+par+'" value="'+options.param[par]+'" />').appendTo($('#temp_post_form'));
+            }	
+        }
+        
+        $('#temp_post_form').attr("action", options.url);
+        
+        if ( typeof options.target != 'undefined') {
+            $('#temp_post_form').attr('target', options.target);
+        }
+        
+        $('#temp_post_form').submit();
+        $('#temp_post_form').remove();
+    }
+    
+	
+    function fncGetTempObj($Parent){
+        var resultObj = {};
+        
+        var objs = $('select, input, textarea', $Parent);
+        
+        for ( var i = 0 ; i < objs.size() ; i++ ) {
+            resultObj[objs.eq(i).attr("name")] = objs.eq(i).val();
+        }
+        
+        return resultObj;
+    }
+	
+    
+	function fncSubmitGetToPost(hrefStr){
+    	var paramObj = {};
+    	var url = "";
+    	
+    	if ( hrefStr.indexOf('?') > -1 ) {
+    		url = hrefStr.split('?')[0];
+            var paramAry = hrefStr.split('?')[1].split('&');
+            
+            var paramObj = {};
+            
+            for ( var i = 0 ; i < paramAry.length ; i++ ) {
+                var paramName = paramAry[i].split('=')[0];
+                var paramValue = paramAry[i].split('=')[1];
+                paramObj[paramName] = paramValue;
+            }	
+    	}
+    	else {
+    		url = hrefStr;
+    	}
+         
+         fncTempFormSubmit({                           
+             param : paramObj,
+             url : url
+         });
+	}
+	
+	function fncShowWait(){
+		if(arguments.length >0){
+			$('#common_wait_bg_msg').find('.loading_msg').html(arguments[0]);
+			$('#common_wait_bg_msg').show();
+		}else{
+			$('#common_wait_bg').show();
+		}
+	}
+	function fncHideWait(){
+		$('#common_wait_bg_msg').hide();
+		$('#common_wait_bg_msg').find('loading_msg').text("");
+		$('#common_wait_bg').hide();
+	}
+	
+	function fncShowPopupSize(_this){
+		var h = $(window).height();
+		if($(window).width() > 768){
+		//pc페이지인 경우
+			$(_this).css('height','auto');
+// 			$(_this).find(".pop_body").css('height','auto');
+			
+			var h= $(_this).outerHeight();
+			if($(window).height() < h+100){
+				h = $(window).height()-100;
+			} 
+
+			var margin_top = (h/2)*-1;
+			var pop_body_h = h - $(_this).find('.title').outerHeight(true);
+			var pop_footer_h = $(_this).find('.pop_footer').outerHeight(true) + parseInt($(_this).find('.pop_footer').css("marginTop")) + parseInt($(_this).find('.pop_footer').css("marginBottom"));
+			pop_body_h -= pop_footer_h; 
+			var margin_h = 0;
+			$($('#l_popup_layer').find('iframe[name=l_popup_iframe]').contents().find('.pop_body')[0]).children().each(function(idx,item){
+				if($(item).prop("tagName") != "TABLE"){
+					margin_h += parseInt($(item).css("marginTop")) + parseInt($(item).css("marginBottom"));
+				}
+			});
+
+			if($(_this).hasClass("static_popup")){
+				$(_this).find(".pop_body").css({'height':(pop_body_h-margin_h)+'px', 'overflow-y':'auto','box-sizing': 'border-box'});
+			}else{
+				$(_this).find(".pop_body").css({'overflow-y':'auto'});
+			}
+			$(_this).css({"top":"50%","margin-top":margin_top+"px", "height": h + "px"});
+		}
+
+	}
+	
+	
+	var l_popup_resize;
+	function responsiveLayer_open(url, param, width, height, method){
+		top.$('body').css({"overflow-y":"hidden"});
+		var _src = url + ((param == undefined || param == '') ? '' : param);
+		
+		if(method !== undefined && method.toUpperCase() === "POST"){
+			fncTempFormSubmit({
+				url : url,
+				param : param,
+	            target : 'l_popup_iframe'
+			});
+		}else{
+			$("#l_popup_layer #l_popup_iframe").attr("src", _src);
+		}
+		
+		if(width !== undefined){
+			width = width < 800 ? 800 : width;	
+			$("#l_popup_layer").css({"width": width,"margin-left": -(width/2)});	
+		}
+		
+		
+		$($('#l_popup_layer').find('iframe[name=l_popup_iframe]')).unbind("load");
+		$($('#l_popup_layer').find('iframe[name=l_popup_iframe]')).load(function(){
+			var _this = this;
+			var resize = function(){
+				
+				$.each($('#l_popup_layer').find('iframe[name=l_popup_iframe]').contents().find('form'),function(index,item){
+					if($(this).find("div").length>0 || $(this).find("table").length>0){
+						$(this).css("height","100%");
+					}	
+				});
+	
+				if($(window).width() > 768){
+					$('#l_popup_layer').find('iframe[name=l_popup_iframe]').contents().find('.pop_body').css({'height': 'auto', 'overflow-y':'auto'});
+					var h = $('#l_popup_layer').find('iframe[name=l_popup_iframe]').contents().find('.win_popup').outerHeight(true);
+					
+					if(height !== undefined){
+						h = height;
+					}
+					if(h > $(window).height()){
+						h = $(window).height()-100;
+						$("#l_popup_layer").css({"top":"50px","margin-top":"0px","height": h + "px"});
+					}else{
+						$("#l_popup_layer").css({"top":"50%","margin-top":(h/2)*-1 +"px","height": h + "px"});
+					}
+	
+					var pop_body_h = h - $('#l_popup_layer').find('iframe[name=l_popup_iframe]').contents().find('.title').outerHeight(true);
+					pop_body_h -= $('#l_popup_layer').find('iframe[name=l_popup_iframe]').contents().find('.pop_footer').outerHeight(true);
+					
+					var margin_h = 0;
+					$($('#l_popup_layer').find('iframe[name=l_popup_iframe]').contents().find('.pop_body')[0]).children().each(function(idx,item){
+						if($(item).prop("tagName") != "TABLE"){
+							margin_h += parseInt($(item).css("marginTop")) + parseInt($(item).css("marginBottom"));
+						}
+					});
+					
+					margin_h = 20;
+					$('#l_popup_layer').find('iframe[name=l_popup_iframe]').contents().find('.pop_body').css({'height':(pop_body_h-margin_h)+'px'});
+				}
+			}
+			if(l_popup_resize !== undefined){
+				$(window).off("resize touchend", l_popup_resize);
+			}
+			l_popup_resize = resize.bind(this);
+			$(window).on("resize touchend", l_popup_resize);
+			l_popup_resize();
+		});
+		
+		$("#l_popup_layer").show();
+		$("#modal_screen").show();
+	}
+
+	
+	function responsiveLayer_open2(url, param, height){
+		$('html, body').animate({scrollTop : 0}, 400);
+		$("#l_popup_layer #l_popup_iframe").attr("src", url + param);
+		$("#l_popup_layer").css("height", height + "px");
+		$("#l_popup_layer #l_popup_iframe").css({"width" : "100%", "height" : height + "px"});
+		$("#l_popup_layer").show();
+		$("#modal_screen").show();
+	}
+	
+	// 전체화면으로 레이어열기
+	function responsiveLayer_open_full(url, param, padding){
+		$('html, body').animate({scrollTop : 0}, 400);
+		
+		var w = $(window).width() - (padding * 2);
+		var h = $(window).height() - (padding * 2);
+		
+		var max_h = 1080 - (padding * 2);
+		if(h > max_h) h = max_h;
+		
+		$("#l_popup_layer_full").css({"top" : padding, "left" : padding, "margin" : "0px", "width" : w, "height" : h, "border" : "0px"});
+		$("#l_popup_layer_full #l_popup_iframe_full").attr("src", url + param);
+		$("#l_popup_layer_full #l_popup_iframe_full").attr("padding", padding);
+		$("#l_popup_layer_full #l_popup_iframe_full").css({"width" : w, "height" : h, "border" : "1px solid #ddd"});
+		$("#l_popup_layer_full").show();
+		$("#modal_screen").show();
+	}
+	
+	// 전체화면으로 레이어 리사이즈
+	function responsiveLayer_full_resize(){
+		if($("#l_popup_layer_full").is(":visible")){
+			var padding = $("#l_popup_layer_full #l_popup_iframe_full").attr("padding");
+			var w = $(window).width() - (padding * 2);
+			var h = $(window).height() - (padding * 2);
+			
+			var max_h = 1080 - (padding * 2);
+			if(h > max_h) h = max_h;
+			
+			$("#l_popup_layer_full").css({"top" : padding, "left" : padding, "margin" : "0px", "margin" : "0px", "width" : w, "height" : h});
+			$("#l_popup_layer_full #l_popup_iframe_full").css({"width" : w, "height" : h});
+		}
+	}
+	
+	function responsiveLayer_close_full(){
+		top.$('body').removeAttr("style");
+		$(parent.document).find("#l_popup_layer_full").hide();
+		
+		$(parent.document).find("#modal_screen").hide();
+		$('#l_popup_layer_full').find('iframe[name=l_popup_iframe_full]').contents().remove();
+		
+		$(parent.document).find("#l_popup_iframe_full").attr("src", "");
+		
+		if(arguments.length > 0){
+			if(arguments[0].callback){
+				var func = "parent."+arguments[0].callback+"()";
+				var tmpFunc = new Function(func);
+				tmpFunc();
+			}
+		}
+	}
+
+	function responsiveLayer_resize(){
+		if($('.sub_content_area_outline').length == 0 && $('.sub_content_area_outline_full').length == 0){ //ctl일 경우는 자동사이즈 조정 안함
+			if($(window).width() > 768){
+				var h = $(window).outerHeight(true) - $('#footer').outerHeight(true) - $('#header').outerHeight(true);
+				$('.sub_content').css('height',h);
+			}else{
+				$('.sub_content').css('height','auto');
+			}
+		
+			if($('.tab_content').length>0){
+				var tabmenu_basic = parseInt($('.tabmenu_basic').css("margin-top")) + parseInt($('.tabmenu_basic').css("margin-bottom"));
+				tabmenu_basic += $('.tabmenu_basic').outerHeight(true);
+				var common_page_header = parseInt($('.common_page_header').css("margin-top")) + parseInt($('.common_page_header').css("margin-bottom"));
+				common_page_header += $('.common_page_header').outerHeight(true);
+				var tab_content = parseInt($('.tab_content').css("padding-top")) + parseInt($('.tab_content').css("padding-bottom"));
+				var movie_box = parseInt($('.movie_box').css("padding-top")) + parseInt($('.movie_box').css("padding-bottom"));
+				var table_bottom_func = $('.table_bottom_func').height()+parseInt($('.table_bottom_func').css("margin-top")) + parseInt($('.table_bottom_func').css("margin-bottom"));;
+				$('.tab_content').css("height",$('.sub_content').height()-tabmenu_basic-common_page_header-tab_content-movie_box-table_bottom_func);
+			}
+		
+		}
+		$(".l_popup").css({"top" : "0px", "left" : "0px", "width" : "100%", "height" : "100%", "margin" : "0px", "border" : "0px"});
+		
+		var title_height = $(".l_popup .title").height() + 90;
+		var parent_iframe_id = "l_popup_iframe"; // 부모 iframe ID
+		var parent_iframe_height = $("#" + parent_iframe_id, parent.document).height();
+		$(".pop_body").css({"height" : (parent_iframe_height - title_height - 20) + "px", "overflow-y" : "auto"});
+	}
+	
+	function responsiveLayer_resize_ai(){
+		
+		$(function(){
+			$(".l_popup2").css("width", "1200px");
+			$(".l_popup2").css({"top" : "0px", "left" : "0px", "width" : "100%", "height" : "100%", "margin" : "0px", "border" : "0px"});
+
+			
+			var title_height = $(".l_popup2 .title").height() + 90;
+			var parent_iframe_id = "l_popup_iframe"; // 부모 iframe ID
+			var parent_iframe_height = $("#" + parent_iframe_id, parent.document).height();
+			//$(".pop_body").css({"height" : (parent_iframe_height - title_height - 20) + "px", "overflow-y" : "auto"});
+		});
+	
+	}
+	
+	
+	function responsiveLayer_close(){
+		top.$('body').removeAttr("style");
+		$(parent.document).find("#l_popup_layer").hide();
+		$(parent.document).find("#modal_screen").hide();
+		$('#l_popup_layer').find('iframe[name=l_popup_iframe]').contents().remove();
+		$(parent.document).find("#l_popup_iframe").attr("src", "");
+		
+		if(arguments.length > 0){
+			if(arguments[0].callback){
+				var func = "parent."+arguments[0].callback+"()";
+				var tmpFunc = new Function(func);
+				tmpFunc();
+			}
+		}
+	}
+	
+	
+	function responsiveLayer_ai_close(){
+		top.$('body').removeAttr("style");
+		$(parent.document).find("#l_popup_layer2").hide();
+		$(parent.document).find("#modal_screen").hide();
+		$('#l_popup_layer2').find('iframe[name=l_popup_iframe]').contents().remove();
+		$(parent.document).find("#l_popup_iframe").attr("src", "");
+		
+		if(arguments.length > 0){
+			if(arguments[0].callback){
+				var func = "parent."+arguments[0].callback+"()";
+				var tmpFunc = new Function(func);
+				tmpFunc();
+			}
+		}
+	}
+	
+	
+	function responsiveLayer_open_exam(url, param, height){
+		$("#l_popup_layer_exam #l_popup_iframe_exam").attr("src", url + param);
+ 		
+		$("#l_popup_layer_exam").show();
+		
+	}
+	
+	function responsiveLayer_close_exam(){
+		$(parent.document).find("#l_popup_layer_exam").hide();
+		$(parent.document).find("#modal_screen").hide();
+		$(parent.document).find("#l_popup_iframe_exam").attr("src", "");
+	}
+	
+	
+	function responsiveLayer_open_ai(url, param, height){
+		$('html, body').animate({scrollTop : 0}, 400);
+		$("#l_popup_layer2 #l_popup_iframe").attr("src", url + param);
+		$("#l_popup_layer2").css("height", height + "px");
+		$("#l_popup2").css("width", "1200px");
+		$("#l_popup_layer2 #l_popup_iframe").css({"width" : "100%", "height" : height + "px"});
+		$("#l_popup_layer2").show();
+		$("#modal_screen").show();
+	}
+	
+	
+	function responsiveLayer_open_diagnosis(url, param, height){
+		$('html, body').animate({scrollTop : 0}, 400);
+		$("#l_popup_layer_diagnosis #l_popup_iframe_diagnosis").attr("src", url + param);
+		/* $("#l_popup_layer_diagnosis").css("height", height + "px") */
+		$("#l_popup_layer_diagnosis #l_popup_iframe_diagnosis").css({"width" : "100%", "height" : "100%"});
+		$("#l_popup_layer_diagnosis").show();
+		$("#modal_screen").show();
+	}
+	
+	function responsiveLayer_close_diagnosis(){
+		$(parent.document).find("#l_popup_layer_diagnosis").hide();
+		$(parent.document).find("#modal_screen").hide();
+		$(parent.document).find("#l_popup_iframe_diagnosis").attr("src", "");
+	}
+	
+	function contentPreviewResponsiveLayer_close(){
+		$(parent.document).find("#l_popup_layer_content_preview").hide();
+		$(parent.document).find("#modal_screen_content").hide();
+		$("#l_popup_iframe_content_preview").attr("src","");
+		
+		top.$('html, body').removeAttr("style");
+
+		if(typeof $($('.l_popup').find('iframe[name=l_popup_iframe]')).get(0).contentWindow.responsiveLayer_close_handler == "function"){
+			$($('.l_popup').find('iframe[name=l_popup_iframe]')).get(0).contentWindow.responsiveLayer_close_handler();
+		}else{
+			$('.l_popup').hide();
+			$('.l_popup_auto').hide();
+			
+			if(typeof(responsiveLayer_close_full) == "function"){
+				responsiveLayer_close_full();
+			}
+		}
+			
+		return false;
+	}
+	
+	function contentPreviewResponsiveLayer_open({url, param, width, height, method, title}) {
+        top.$('body').css({
+            "overflow-y": "hidden"
+        });
+        var _src = url + ((param == undefined || param == '') ? '' : param);
+
+        if (method !== undefined && method.toUpperCase() === "POST") {
+            fncTempFormSubmit({
+                url: url,
+                param: param,
+                target: 'l_popup_iframe_content_preview'
+            });
+        } else {
+            $("#l_popup_layer_content_preview #l_popup_iframe_content_preview").attr("src", _src);
+        }
+        
+        if(title){
+        	$("#l_popup_layer_content_preview #title_content_viewer").html(title)
+        }
+
+        if (width !== undefined) {
+            width = width < 800 ? 800 : width;
+            $("#l_popup_layer_content_preview").css({
+                "width": width,
+                "margin-left": -(width / 2)
+            });
+        }
+
+        $($('#l_popup_layer_content_preview').find('iframe[name=l_popup_iframe_content_preview]')).unbind("load");
+        $($('#l_popup_layer_content_preview').find('iframe[name=l_popup_iframe_content_preview]')).load(function() {
+            var _this = this;
+            var resize = function() {
+
+                $.each($('#l_popup_layer_content_preview').find('iframe[name=l_popup_iframe_content_preview]').contents().find('form'), function(index, item) {
+                    if ($(this).find("div").length > 0 || $(this).find("table").length > 0) {
+                        $(this).css("height", "100%");
+                    }
+                });
+
+                if ($(window).width() > 768) {
+                    $('#l_popup_layer_content_preview').find('iframe[name=l_popup_iframe_content_preview]').contents().find('.pop_body').css({
+                        'height': 'auto',
+                        'overflow-y': 'auto'
+                    });
+                    var h = $('#l_popup_layer_content_preview').find('iframe[name=l_popup_iframe_content_preview]').contents().find('.win_popup').outerHeight(true);
+
+                    if (height !== undefined) {
+                        h = height;
+                    }
+                    if (h > $(window).height()) {
+                        h = $(window).height() - 100;
+                        $("#l_popup_layer_content_preview").css({
+                            "top": "50px",
+                            "margin-top": "0px",
+                            "height": h + "px"
+                        });
+                    } else {
+                        $("#l_popup_layer_content_preview").css({
+                            "top": "50%",
+                            "margin-top": (h / 2) * -1 + "px",
+                            "height": h + "px"
+                        });
+                    }
+
+                    var pop_body_h = h - $('#l_popup_layer_content_preview').find('iframe[name=l_popup_iframe_content_preview]').contents().find('.title').outerHeight(true);
+                    pop_body_h -= $('#l_popup_layer_content_preview').find('iframe[name=l_popup_iframe_content_preview]').contents().find('.pop_footer').outerHeight(true);
+
+                    var margin_h = 0;
+                    $($('#l_popup_layer_content_preview').find('iframe[name=l_popup_iframe_content_preview]').contents().find('.pop_body')[0]).children().each(function(idx, item) {
+                        if ($(item).prop("tagName") != "TABLE") {
+                            margin_h += parseInt($(item).css("marginTop")) + parseInt($(item).css("marginBottom"));
+                        }
+                    });
+
+                    margin_h = 20;
+                    $('#l_popup_layer_content_preview').find('iframe[name=l_popup_iframe_content_preview]').contents().find('.pop_body').css({
+                        'height': (pop_body_h - margin_h) + 'px'
+                    });
+                }
+            }
+            if (l_popup_resize !== undefined) {
+                $(window).off("resize touchend", l_popup_resize);
+            }
+            l_popup_resize = resize.bind(this);
+            $(window).on("resize touchend", l_popup_resize);
+            l_popup_resize();
+        });
+
+        $("#l_popup_layer_content_preview").show();
+        $("#modal_screen_content").show();
+        
+        $('#modal_screen_content').click(function(){
+        	$("#l_popup_iframe_content_preview").attr("src","");
+   			$('#modal_screen_content').hide();
+    			
+    		return false;
+    	});
+    }
+	
+	
+	var customModal = {	
+		alert: function(p_title, p_content, p_btn_name, callback){		
+			if(!p_btn_name){
+				p_btn_name = "확인";
+			}
+			
+			var modal_o = $('<div>').addClass('msg_popup').appendTo('body');
+			
+			var modalHeader_o = $('<div>').addClass('title').appendTo(modal_o);
+			var modalContent_o = $('<div>').addClass('pop_body').appendTo(modal_o);
+			var modalFooter_o = $('<div>').addClass('pop_footer').appendTo(modal_o);
+			
+			//헤더
+			if(p_title){
+				$('<span>').text(p_title).appendTo(modalHeader_o);
+			}
+			$('<a>').addClass("btn_popup_close").attr("attr","#").html("팝업 닫기").bind('click', function(e){
+				$(modal_o).fadeOut(100);
+				if(typeof callback == "function"){
+					callback();
+				}
+				setTimeout(function(){$(modal_o).remove();},200);
+			}).appendTo(modalHeader_o);
+			
+			//본문
+			$('<p>').html(p_content).appendTo(modalContent_o);
+			
+			//푸터
+			var modalFooterActionRow_o = $('<div>').addClass('row_func').appendTo(modalFooter_o);
+			
+			var cancelBtn_o = $('<button>').addClass("btn btn_lg btn_bg_ui").attr({
+				"type" : "button"
+			}).html(p_btn_name).appendTo(modalFooterActionRow_o);
+			
+			//이벤트 바인딩
+			$(cancelBtn_o).bind('click', function(e){
+				$(modal_o).fadeOut(100);
+				if(typeof callback == "function"){
+					callback();
+				}
+				setTimeout(function(){$(modal_o).remove();},200);
+			});
+			
+			$(modal_o).bind("keyup", function(ev){
+				if(ev.keyCode == 13){
+					$(modal_o).fadeOut(100);
+				};
+			});
+			
+			$(modal_o).fadeIn(100);
+		},
+		
+		confirm: function(p_title, p_content, p_confirm_name, p_confirmCallback, p_cancel_name, p_cancelCallback){
+			if(!p_confirm_name){
+				p_confirm_name = "확인";
+			}
+			
+			if(!p_cancel_name){
+				p_cancel_name = "취소";
+			}
+			
+			var modal_o = $('<div>').addClass('msg_popup').appendTo('body');
+			
+			var modalHeader_o = $('<div>').addClass('title').appendTo(modal_o);
+			var modalContent_o = $('<div>').addClass('pop_body').appendTo(modal_o);
+			var modalFooter_o = $('<div>').addClass('pop_footer').appendTo(modal_o);
+			
+			//헤더
+			if(p_title){
+				$('<span>').text(p_title).appendTo(modalHeader_o);
+			}
+			
+			//본문
+			$('<p>').html(p_content).appendTo(modalContent_o);
+			
+			//푸터
+			var modalFooterActionRow_o = $('<div>').addClass('row_func').appendTo(modalFooter_o);
+			var confirmBtn_o = $('<button>').addClass("btn btn_lg btn_bg_ui").attr({
+				"type" : "button"
+			}).html(p_confirm_name).appendTo(modalFooterActionRow_o);
+			
+			var cancelBtn_o = $('<button>').addClass("btn btn_lg btn_bg_white").attr({
+				"type" : "button"
+			}).html(p_cancel_name).appendTo(modalFooterActionRow_o);
+
+			$(cancelBtn_o).bind('click', function(e){
+				if(typeof p_cancelCallback == "function"){
+					p_cancelCallback();
+				}
+				$(modal_o).fadeOut(100);
+				setTimeout(function(){$(modal_o).remove();},200);
+			});
+			
+			$(confirmBtn_o).bind('click', function(e){
+				if(typeof p_confirmCallback == "function"){
+					p_confirmCallback();
+				}
+				$(modal_o).fadeOut(100);
+				setTimeout(function(){$(modal_o).remove();},200);
+			});
+			
+			$(modal_o).fadeIn(100);
+		},
+		confirm2: function(p_title, p_content, p_confirm_name, p_confirmCallback, p_confirm_name2, p_confirmCallback2, p_cancel_name, p_cancelCallback){
+			if(!p_confirm_name){
+				p_confirm_name = "확인";
+			}
+			
+			if(!p_confirm_name2){
+				p_confirm_name2 = "확인";
+			}
+			
+			if(!p_cancel_name){
+				p_cancel_name = "취소";
+			}
+			
+			var modal_o = $('<div>').addClass('msg_popup').appendTo('body');
+			
+			var modalHeader_o = $('<div>').addClass('title').appendTo(modal_o);
+			var modalContent_o = $('<div>').addClass('pop_body').appendTo(modal_o);
+			var modalFooter_o = $('<div>').addClass('pop_footer').appendTo(modal_o);
+			
+			//헤더
+			if(p_title){
+				$('<span>').text(p_title).appendTo(modalHeader_o);
+			}
+			
+			//본문
+			$('<p>').html(p_content).appendTo(modalContent_o);
+			
+			//푸터
+			var modalFooterActionRow_o = $('<div>').addClass('row_func').appendTo(modalFooter_o);
+			
+			var confirmBtn_o = $('<button>').addClass("btn btn_lg btn_bg_ui").attr({
+				"type" : "button"
+			}).html(p_confirm_name).appendTo(modalFooterActionRow_o);
+			
+			var confirmBtn2_o = $('<button>').addClass("btn btn_lg btn_bg_ui").attr({
+				"type" : "button"
+			}).html(p_confirm_name2).appendTo(modalFooterActionRow_o);
+			
+			var cancelBtn_o = $('<button>').addClass("btn btn_lg btn_bg_white").attr({
+				"type" : "button"
+			}).html(p_cancel_name).appendTo(modalFooterActionRow_o);
+
+			$(cancelBtn_o).bind('click', function(e){
+				if(typeof p_cancelCallback == "function"){
+					p_cancelCallback();
+				}
+				$(modal_o).fadeOut(100);
+				setTimeout(function(){$(modal_o).remove();},200);
+			});
+			
+			$(confirmBtn_o).bind('click', function(e){
+				if(typeof p_confirmCallback == "function"){
+					p_confirmCallback();
+				}
+				$(modal_o).fadeOut(100);
+				setTimeout(function(){$(modal_o).remove();},200);
+			});
+			
+			$(confirmBtn2_o).bind('click', function(e){
+				if(typeof p_confirmCallback2 == "function"){
+					p_confirmCallback2();
+				}
+				$(modal_o).fadeOut(100);
+				setTimeout(function(){$(modal_o).remove();},200);
+			});
+			
+			$(modal_o).fadeIn(100);
+		},	
+	}
+	
+	
+	function window_print_part(title, obj, css_arr){
+        obj.printElement({
+            printMode: 'popup', 
+            overrideElementCSS: css_arr,
+            pageTitle: title,
+            leaveOpen: false
+        }); 
+	}
+	
+	$(window).resize(function(){
+		
+		if($('.sub_content_area_outline').length == 0 && $('.sub_content_area_outline_full').length == 0){ //ctl일 경우는 자동사이즈 조정 안함
+			if($(window).width() > 1024){
+				var h = $(window).outerHeight(true) - $('#footer').outerHeight(true) - $('#header').outerHeight(true);
+				$('.sub_content').css('height',h);
+			}else{
+				$('.sub_content').css('height','auto');
+			}
+		
+			if($('.tab_content').length>0){
+				var tabmenu_basic = parseInt($('.tabmenu_basic').css("margin-top")) + parseInt($('.tabmenu_basic').css("margin-bottom"));
+				tabmenu_basic += $('.tabmenu_basic').outerHeight();
+				var common_page_header = parseInt($('.common_page_header').css("margin-top")) + parseInt($('.common_page_header').css("margin-bottom"));
+				common_page_header += $('.common_page_header').outerHeight();
+				var tab_content = parseInt($('.tab_content').css("padding-top")) + parseInt($('.tab_content').css("padding-bottom"));
+				var movie_box = parseInt($('.movie_box').css("padding-top")) + parseInt($('.movie_box').css("padding-bottom"));
+				var table_bottom_func = $('.table_bottom_func').height()+parseInt($('.table_bottom_func').css("margin-top")) + parseInt($('.table_bottom_func').css("margin-bottom"));
+				var h = $('.sub_content').outerHeight()-tabmenu_basic-common_page_header-tab_content-movie_box-table_bottom_func;
+				if(h < 350){
+					h = 350;
+				}
+				$('.tab_content').css("height",h+"px");
+			}
+		}
+		
+		responsiveLayer_full_resize();
+	});
+
+	
+	function getFileSizeUnitToByte(x) {
+	 if(x=='0'){
+		return x;
+	 }
+	  var s = ['bytes', 'kB', 'MB', 'GB', 'TB', 'PB'];
+	  var e = Math.floor(Math.log(x) / Math.log(1024));
+	  return (x / Math.pow(1024, e)).toFixed(2) + " " + s[e];
+	};
+
+	var timerId = null;
+	
+	window.addEventListener('offline', function(e) { timerId = setInterval(function(){dunet.msgShow("현재 네트워크에 연결되어 있지 않습니다.<br/>네트웍 문제로 학습에 장해가 발생할 수 있습니다.");},5000); });
+	window.addEventListener('online', function(e) { clearInterval(timerId); });
+	
+		
+	function fncSetSessionClassRooom(course_id,class_no){
+		$.ajax({
+	        url: "/lms/class/classroom/doSetSessionClassRoom.dunet",
+	        type: "post",
+	        data: {
+	            course_id : course_id, 
+	            class_no : class_no    
+	        },
+	        async:false,
+	        success: function(transport){
+	        },
+	        error : function() {
+	        }
+		});
+	}
+	
+	function inNumber(evt){
+	    var code = evt.which?evt.which:event.keyCode;
+	    if(code < 48 || code > 57){
+	        return false;
+	    }
+	}
+
+	
+	function commonLogoutFunc() {
+		sessionStorage.removeItem("flag_time_check_popup_yn");
+		$.ajax({
+	         url: "/login/doLogout.dunet",
+	         type: "post",
+	         dataType: "json",
+             beforeSend:function(){
+            	 fncShowWait();
+             },
+	         success: function(transport){
+	        	 localStorage.clear();
+	        	 
+	     		if("" != ""){
+	    			top.location.href = "";
+	    			return false;
+	    		}
+
+	     		
+	     		if("" === "Y" && transport.fav == 'DIMA'){
+	    			top.location.href = 'https://portal.dima.ac.kr/sso/logOut.aspx';
+	    			return false;
+	    		}
+	    		
+			 	if(transport.refer_url != null && transport.refer_url != ''){
+	            	fncSubmitGetToPost(transport.refer_url);
+		 		} else if (transport.fav == 'Y') {
+		 			if(JSON.parse(sessionStorage.getItem("cyberLoginInfo")) != null){
+	 					self.location.href ='/admin/doViewAdMain.dunet';
+	 					return false;
+	 				}
+	    			fncSubmitGetToPost('/lms/admin/course/manage/doListCourseManageView.dunet?adminidx=3');
+	             } else if(transport.fav == 'U' || transport.fav == 'stud'){
+	            	if(JSON.parse(sessionStorage.getItem("cyberLoginInfo")) != null){
+	 					self.location.href ='/admin/doViewAdMain.dunet';
+	 					return false;
+	 				}
+	            	fncSubmitGetToPost('/lms/admin/statistic/doListStudentDistribution.dunet');
+		 		 } else if(transport.fav == 'user_login'){
+	 				if(JSON.parse(sessionStorage.getItem("cyberLoginInfo")) != null){
+	 					//분기처리
+						if("HS" == "LTU"){
+							location.replace("/cc/admin/doViewAdMain.dunet");
+						}else{
+	 						self.location.href ='/admin/doViewAdMain.dunet';
+	 					}
+	 					return false;
+	 				}
+	 				if("HS" == "LTU"){
+						console.log("cyber_login-> user_login");
+						//session.removeAttribute("user_no")
+						//session.setAttribute("user_no",session.getAttribute("temp_user_no"))
+						//session.removeAttribute("temp_user_no")
+						//한 다음에 이동
+						fncSubmitGetToPost('/lms/admin/system/user/doListView.dunet');
+	 				}else{
+	            		fncSubmitGetToPost('/lms/admin/system/user/doListView.dunet');
+	 				}
+		 		 } else if (transport.fav == 'kycc_med_c') {
+		 			if(JSON.parse(sessionStorage.getItem("cyberLoginInfo")) != null){
+	 					self.location.href ='/admin/doViewAdMain.dunet';
+	 					return false;
+	 				}
+                	fncSubmitGetToPost('/lms/admin/coursekym/manage/doListCourseManageKymView.dunet?adminidx=4');
+                 } else if (transport.fav == 'kycc_med_w') {
+                	if(JSON.parse(sessionStorage.getItem("cyberLoginInfo")) != null){
+		 					self.location.href ='/admin/doViewAdMain.dunet';
+		 					return false;
+		 			}
+                	fncSubmitGetToPost('/lms/admin/coursekym/manage/doListWeekManageView.dunet?adminidx=4');
+                 } else if (transport.fav == 'kycc_med_e') {
+                	if(JSON.parse(sessionStorage.getItem("cyberLoginInfo")) != null){
+		 					self.location.href ='/admin/doViewAdMain.dunet';
+		 					return false;
+		 			}
+                	fncSubmitGetToPost('/lms/admin/examkym/manage/doCourseListView.dunet?adminidx=4');
+                 } else if(transport.fav == 'OK'){
+	            	 fncTempFormSubmit({
+	                     param : {
+	                                 mnid : transport.paramMap.mnid,
+	                                 course_id : transport.paramMap.course_id,
+	                                 class_no : transport.paramMap.class_no
+	                             },
+	                     url : '/lms/class/classroom/doViewClassRoom_new.dunet'
+	                 });
+	            } else if (transport.fav == 'C') {
+	            	fncSubmitGetToPost('/lms/admin/statistic/doCourseProfPerformView.dunet');
+             	} 
+			 	
+	            else {
+					//분기처리
+					if("HS" == "LTU"){
+						System.out.println("check2- 로그아웃 시 cc로 넘어가?");
+						location.replace("/cc/main/MainView.dunet");
+					}else{
+	                	location.replace('/main/MainView.dunet');
+					}
+	            }
+			 	
+			 	if($.browser.mobile){
+					callAppFunction({method : "logout"});
+				}
+			 	
+	         }
+	     });
+	}
+	
+	
+	function fncMoveMenu(url)
+	{
+		if(url.startsWith("http")) window.open(url, "_blank");
+		else location.href = url;
+	}
+
+	
+	function fncDeleteQuote(str) {
+		str = str.replace(/'/g, "`");	
+		str = str.replace(/"/g, "`");	
+		return str;
+	}
+	
+	
+	function fncCheckPanoptoMakedAccount(callback){
+		$.ajax({
+		     type: "GET", 
+		     url: "/main/doCheckPanoptoMakedAccount.dunet",  
+		     dataType: "json",
+		     data : {
+		    	user_no : "202678183"
+		     },
+		     success: function(response){
+		    	if(callback && typeof callback == "function") callback(response.result);
+		     },
+		     error:function(request,status,error){
+		        alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+		     }
+		});		
+	}
+	
+	
+	function fncPanopto(){
+		
+		if("" != "Y" && "N" == "Y"){
+			
+			fncShowWait("Utime Panopto Logging into...");
+			
+			
+	        var url_panopto = "";
+			if(url_panopto != null && url_panopto != "") $('#panoptoIframe').attr("src", url_panopto);
+			
+			
+			if("N" == "N"){
+				fncPanoptoMakeAccount();
+				
+				setTimeout(function(){
+					
+					if("HS" == "SC"){
+						fncPanoptoMakeAccountComplete();
+					}else{
+						fncCheckPanoptoMakedAccount(function(result){
+							if(result == "OK"){
+								fncPanoptoMakeAccountComplete();
+							}else{
+								alert("파놉토 계정생성이 실패했습니다!\n새로고침(F5) 하세요.");
+								fncHideWait();
+							}
+						});
+					}
+					
+				}, 3000);
+			}else{
+				setTimeout(function(){
+					fncHideWait();
+				}, 3000);
+			} 	
+		}
+	}
+	
+	function fncPanoptoMakeAccount(){
+		
+	 	
+		 	
+		 	
+		 	
+	 		
+	 		var group = "4";
+	 		var job = "학생";
+	 		
+	 		
+ 		
+ 		
+	 	
+	 	var email = "pjy10291127@gmail.com";
+	 	if(email==""){
+	 		email = "202678183@dunet.com";
+	 	}
+
+	 	var name = "박장혁";
+	 	if(name==""){
+	 		name = "박장혁";
+	 	}
+	 	
+	 	
+	 	if("202678183" != "" && group != "" && "N" == "Y"){
+	 		var url = ""+job+"&USER_NAME2="+name+"&USER_ID=202678183";
+	 			url = url + "&USER_PW=202678183&USER_EMAIL=";
+	 			url = url + email + "&GROUP=" + group + "&API_KEY=";
+	 		$('#adduser').attr("src",url);
+	 	}
+	}
+	
+	function fncPanoptoMakeAccountComplete(){
+		 $.ajax({
+             url: '/login/doUpdatePanoptoAccount.dunet',
+             type: "post",
+             data: {
+            	 user_no : "202678183"
+             },
+             dataType: "json",
+             success: function(transport){
+            	 fncHideWait();
+             },
+             error : function(){
+                 alert("문제가 발생하였습니다.");
+                 fncHideWait();
+             }
+         });
+	}
+	
+	function panoptoGo(){
+
+	
+		//utime 파놉토 플러그인 사용
+		var url = "";
+	
+	
+
+	
+		var name = "파놉토";
+		var option = "width=1200, height=700, resizable=yes";
+		window.open(url,name,option);
+	}
+	
+	function escapeHtml(text) {
+		var textarea = document.createElement('textarea');
+		textarea.innerHTML = text;
+		
+		
+		var textarea2 = document.createElement('textarea');
+		textarea2.innerHTML = textarea.value;
+		
+		return textarea2.value;
+	}	
+	
+	
+	function htmlDecode2(text) {
+		var arr = ["lt;", "gt;", "quot;", "amp;", "#39;"];
+		var sw = false;
+		for(var i = 0; i < arr.length; i++){
+			if(text.indexOf(arr[i]) > -1){
+				sw = true;
+				break;
+			}
+		}
+		
+		if(sw){
+			var textarea = $("<textarea>" + htmlUnescape(text) + "</textarea>");
+			
+			arr = ['class="exp_img"', '<sub>', '<sup>', '<img'];
+			sw = false;
+			for(var i = 0; i < arr.length; i++){
+				if(htmlUnescape(textarea.text()).indexOf(arr[i]) > -1){
+					sw = true;
+					break;
+				}
+			}
+			
+			if(sw) return htmlUnescape(textarea.text()).replace("<!-- Not Allowed Tag Filtered -->", "");
+			else return '<xmp style="display:inline;">' + htmlUnescape(textarea.text()).replace("<!-- Not Allowed Tag Filtered -->", "") + '</xmp>';
+		}else{
+			return '<xmp style="display:inline;">' + text + '</xmp>';
+		}
+	}	
+	function htmlEscape(str) { 
+		return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+	}
+	function htmlUnescape(value){ 
+		return String(value).replace(/&quot;/g, '"').replace(/&#39;/g, "'") .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+	}
+
+	
+	function setMathjax($el,value){
+		$el.empty();
+		if(value.indexOf("math") != -1){
+			$el.append(value);
+			MathJax.Hub.Queue(['Typeset', MathJax.Hub, $el[0]]);
+		}else{
+			$el.append(value);	
+		}
+	}
+	
+	function isValidDateStr(sdate,edate){
+		sdate = new Date(sdate.substring(0,4) + "/" +sdate.substring(4,6) + "/" + sdate.substring(6,8) +" "+ sdate.substring(8,10) +":"+sdate.substring(10,12));
+		edate = new Date(edate.substring(0,4) + "/" +edate.substring(4,6) + "/" + edate.substring(6,8) +" "+ edate.substring(8,10) +":"+edate.substring(10,12));
+		
+		var diff = (edate.getTime()-sdate.getTime())/(1000*60);
+		$('#exam_time').val(diff);
+		
+		if(diff <= 0){
+			alert("종료일시가 시작일시보다 이전이거나 같습니다.");
+			return false;
+		}
+		return true;
+	}
+	
+	function getTimeDiff(sdate, edate){
+		sdate = new Date(sdate.substring(0,4) + "-" +sdate.substring(4,6) + "-" + sdate.substring(6,8) +" "+ sdate.substring(8,10) +":"+sdate.substring(10,12));
+		edate = new Date(edate.substring(0,4) + "-" +edate.substring(4,6) + "-" + edate.substring(6,8) +" "+ edate.substring(8,10) +":"+edate.substring(10,12));
+		
+		return (edate.getTime() - sdate.getTime()) / (1000 * 60);
+	}
+	
+	
+	function getNowString(){
+	    var current_date = new Date(); 
+	    var year = current_date.getFullYear();
+	    var month = current_date.getMonth() + 1;
+	    var day = current_date.getDate();
+	    var hour = current_date.getHours();
+	    var minute = current_date.getMinutes();
+	    var second = current_date.getSeconds();
+	    
+	    month = (month < 10) ? "0" + month : month; 
+	    day = (day < 10) ? "0" + day : day; 
+	    hour = (hour < 10) ? "0" + hour : hour; 
+	    minute = (minute < 10) ? "0" + minute : minute; 
+	    second = (second < 10) ? "0" + second : second; 
+	    
+	    var datetime = year + "" + month + "" + day + "" + hour + "" + minute + "" + second;
+	    return datetime;
+	}
+	
+	
+	function getStringFromDate(date){
+	    var year = date.getFullYear();
+	    var month = date.getMonth() + 1;
+	    var day = date.getDate();
+	    var hour = date.getHours();
+	    var minute = date.getMinutes();
+	    var second = date.getSeconds();
+	    
+	    month = (month < 10) ? "0" + month : month; 
+	    day = (day < 10) ? "0" + day : day; 
+	    hour = (hour < 10) ? "0" + hour : hour; 
+	    minute = (minute < 10) ? "0" + minute : minute; 
+	    second = (second < 10) ? "0" + second : second; 
+	    
+	    var datetime = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+	    return datetime;
+	}
+	
+	function changeToHhmmssFromSs(_second) {
+		var hour = parseInt(_second / 3600);
+		var minute = parseInt((_second % 3600) / 60);
+		var second = _second % 60;
+		
+		hour = (hour < 10) ? "0" + hour : hour; 
+		minute = (minute < 10) ? "0" + minute : minute; 
+		second = (second < 10) ? "0" + second : second; 
+		    
+		return hour + ":" + minute + ":" + second;
+	}
+	
+	function fncPopupResize(){
+		$(window).trigger('resize');
+	}
+
+	
+	function fncClubIframeResize(){
+		if(typeof parent.fncIframeResize !== undefined){
+			parent.fncIframeResize();
+		}
+	}
+	
+	
+	function openDialogIframe(url, title, id, width, height, params){
+		if(params){
+			params['dialog_id'] = id;
+		}else{
+			params = {"dialog_id" : id};
+		}
+		
+		var d = $('<div id="'+id+'" style=""><iframe name="'+id+'_iframe" src="'+url+'" style="width:'+width+'px;height:'+height+'px;border:none;" frameBorder="0" /></div>');
+		d.dialog({ 
+		   autoOpen : true, 
+		   modal : false, 
+		   resizable : false, 
+		   height: 'auto', 
+		   title : title, 
+		   width : 'auto', 
+		   position : { my: "center", at: "center", of: window }, 
+		   open : function(event, ui){ 
+		   	   $(this).dialog().parents(".ui-dialog").find(".ui-dialog-titlebar").css({"color": "white", "background-color" : "#4a4244"});
+		   	   
+			   var tempForm = document.createElement("form"); 
+			   $(tempForm).attr("action", url).attr("method", "post").attr("target", id + "_iframe"); 
+			   for(var paramName in params){ 
+			      $(tempForm).append('<input type="hidden" name="'+paramName+'" value="'+params[paramName]+'" />'); 
+			   } 
+			   document.body.appendChild(tempForm); 
+			   tempForm.submit(); 
+			   document.body.removeChild(tempForm); 
+		   }, 
+		   close : function(){ 
+		      $(this).dialog('destroy').remove(); 
+		      $(".modal_screen").hide();
+		   } 
+		});
+		
+		d.parent().css("z-index", "999999999999");
+	}
+	
+	
+	function openDialogIframeSurvey(url, title, id, hide_bg_sw, width, height, params){
+		if(params){
+			params['dialog_id'] = id;
+		}else{
+			params = {"dialog_id" : id};
+		}
+		
+		var d = $('<div id="'+id+'" style=""><iframe name="'+id+'_iframe" src="'+url+'" style="width:'+width+'px;height:'+height+'px;border:none;" frameBorder="0" /></div>');
+		d.dialog({ 
+		   autoOpen : true, 
+		   modal : false, 
+		   resizable : false, 
+		   height: 'auto', 
+		   title : title, 
+		   width : 'auto', 
+		   position : { my: "center", at: "center", of: window }, 
+		   open : function(event, ui){ 
+		   	   $(this).dialog().parents(".ui-dialog").find(".ui-dialog-titlebar").css({"color": "white", "background-color" : "#4a4244"});
+		   	   
+			   var tempForm = document.createElement("form"); 
+			   $(tempForm).attr("action", url).attr("method", "post").attr("target", id + "_iframe"); 
+			   for(var paramName in params){ 
+			      $(tempForm).append('<input type="hidden" name="'+paramName+'" value="'+params[paramName]+'" />'); 
+			   } 
+			   document.body.appendChild(tempForm); 
+			   tempForm.submit(); 
+			   document.body.removeChild(tempForm); 
+			   
+			   if(params && params['force_yn'] && params['force_yn'] == "Y") $(".ui-dialog-titlebar-close", ui.dialog).hide();
+		   }, 
+		   close : function(){ 
+		      $(this).dialog('destroy').remove(); 
+		      if(hide_bg_sw) $(".modal_screen_survey").hide();
+		   } 
+		});
+		
+		d.parent().css("z-index", "999999999999");
+	}
+	
+	
+	function fncCheckByte(obj, max_byte){
+		var ls_str = obj.value;
+     	var li_str_len = ls_str.length;
+     	var li_max = max_byte;
+      	var i = li_byte = li_len = 0;
+      	var ls_one_char = ls_str2 = "";
+      
+      	for(i = 0; i < li_str_len; i++) {
+      		if(escape(ls_str.charAt(i)).length > 4){
+      			li_byte += 3;
+			}
+			else{
+				li_byte++;
+			}
+      		
+	        if(li_byte <= li_max){
+	          li_len = i + 1;
+	        }
+	    }
+      	
+    	if(li_byte > li_max) {
+    		alert('' + max_byte + 'byte를 초과하였습니다.' + ' (' + li_byte + 'byte)');
+    		
+	        ls_str2 = ls_str.substr(0, li_len);
+	        obj.value = ls_str2;
+    	}
+    	
+    	obj.focus();
+	}
+	
+	
+	function getUrlParameter(url, param){
+		var results = new RegExp("[?&]" + param + "=([^&#]*)").exec(url);
+		return results ? decodeURI(results[1]) : "";
+	}
+	
+	
+	function backControl(callback) {
+		window.innerDoc = false; 
+		
+		window.addEventListener('mouseover', function(e) { window.innerDoc = true; });
+		window.addEventListener('mouseout', function(e) { window.innerDoc = false; }); 
+		
+		window.history.pushState({page:"first"}, document.title, location.pathname + '#main'); // first
+		
+		window.addEventListener('popstate', function(e) {
+			window.history.pushState({page:"historyChanged"}, document.title, location.pathname + '#main'); //changed
+			if (!window.innerDoc) { 
+				if(callback && typeof callback == "function") callback();
+			} 
+		});
+	}
+	
+	
+	function fncMoveMenuInLms(url){
+		if(url.indexOf("lms/certificate/class/doCertificateSafeList2.dunet") > -1){ 
+			fncTempFormSubmit({                           
+		        param : {"mnid" : "202101179509"}, 
+		        url : url.split("?")[0]          
+		    });
+		}else if(url.indexOf("lms/myLecture/doCourseApplyView2.dunet") > -1){ 
+			fncTempFormSubmit({                           
+		        param : {"mnid" : "202101229067"}, 
+		        url : url.split("?")[0]          
+		    });
+		}else{
+			fncMoveMenu(url);
+		}
+	}
+	
+	function panoptoLogout(){
+		//파놉토 로그아웃
+		fncShowWait("Panopto Loging Out..");
+		$('#ssoLogoutIframe').attr("src", "");
+		$('#panoptoLogoutIframe').attr("src", ""); 
+		setTimeout(function(){
+			fncHideWait();
+			commonLogoutFunc();
+		},3000);
+	}
+
+	function panoptoSamlLogout(){
+		fncShowWait("Panopto Loging Out..");
+		$("#panopto_saml_object_logout").attr("data", "");
+		
+	    setTimeout(function(){
+ 	    	fncHideWait();
+ 	        commonLogoutFunc();
+		}, 1000);
+	}
+
+	function lmsLogout(){
+		
+			
+			
+			
+				commonLogoutFunc();
+			
+		
+	}
+	
+	function saml_submit_complete(){
+		fncHideWait();
+	}
+	
+	var bc_hidden;
+	var bc_visibilityChange;
+	
+	// 화면전환시 세션체크
+	function bc_event_handler(){
+		if (typeof document.hidden !== "undefined") { 
+			bc_hidden = "hidden";
+			bc_visibilityChange = "visibilitychange";
+		} else if (typeof document.msHidden !== "undefined") {
+			bc_hidden = "msHidden";
+			bc_visibilityChange = "msvisibilitychange";
+		} else if (typeof document.webkitHidden !== "undefined") {
+			bc_hidden = "webkitHidden";
+			bc_visibilityChange = "webkitvisibilitychange";
+		}
+		
+		if (typeof document.addEventListener === "undefined" || bc_hidden === undefined) {
+		  console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+		} else {
+		  document.removeEventListener(bc_visibilityChange, bc_handleVisibilityChange);
+		  document.addEventListener(bc_visibilityChange, bc_handleVisibilityChange, false);
+		}
+	}
+	
+	function bc_handleVisibilityChange(){
+		if (!document[bc_hidden]) {
+			$.ajax({
+                url: "/lms/class/exam/apply/doGetSessionCheck.dunet",
+                type: "post",
+                data: {},
+                dataType: "json",
+                success: function(transport){
+                	if(transport.SESSION == "EXPIRED_SESSION_EXAM"){
+    					alert("로그인 후 이용하실 수 있습니다.");
+    					location.replace("/main/MainView.dunet");
+    				}
+                },
+                error : function(){
+                    alert("이용에 불편을 드려서 죄송합니다. 관리자에게 문의하세요.");
+                }
+            });
+		}
+	}
+	
+	function login_saml_panopto(){
+		$.ajax({
+            url: '/main/SSOServiceLogin_json.dunet',
+            type: "post",
+            dataType: "json",
+            success: function(data){
+            	$("#samlForm_ios input[name='SAMLResponse']").val(data.SAMLResponse);
+            	$("#samlForm_ios input[name='RelayState']").val(data.RelayState);
+            	$("#samlForm_ios").attr("action", data.assertionConsumerServiceURL);
+            	$("#samlForm_ios").submit();
+            },
+            error : function(){
+                fncHideWait();
+            }
+        });
+	}
+	
+	var fipr_callback = null;
+	function readyAppFunction(callback){
+		if(fipr_callback) window.removeEventListener("flutterInAppWebViewPlatformReady", fipr_callback);
+		window.addEventListener("flutterInAppWebViewPlatformReady", callback);
+		fipr_callback = callback;
+	}
+	function callAppFunction(param){
+		window.flutter_inappwebview.callHandler("JavascriptChannel", param);
+	}
+	function callBackAppFunction(param, callback){
+		window.flutter_inappwebview.callHandler("JavascriptChannel", param).then(function(response) {
+			 callback(response);
+		});
+	}
+
+	function hidePanopto(){
+		close_preview("app");
+	}
+	
+	function gogoTime(){
+		var iframe = document.getElementById("learning_active").contentWindow;
+		if(iframe && $.isFunction(iframe.gogoTime)) iframe.gogoTime();
+	}
+	
+	function fncTimeCheck(){
+		var iframe = document.getElementById("learning_active").contentWindow;
+		if(iframe && $.isFunction(iframe.fncTimeCheck)) iframe.fncTimeCheck();
+	}
+	
+	function save_app_token(token){
+		var device = ($.browser.mobile && ($.browser.ipad || $.browser.iphone || $.browser.ipod)) ? "ios" : "android";
+		
+		 $.ajax({
+             url: '/lms/myLecture/doAddUserAppToken.dunet',
+             type: "post",
+             data: { 
+             	device : device,
+             	token : token
+             },
+             dataType: "json",
+             success: function(transport){
+             	//console.log("앱토큰 저장완료");
+             },
+             error : function(){
+                 alert("오류가 발생하였습니다. 관리자에게 문의해주세요");
+             }
+         });
+	}
+	
+	function doAppAutoLogin(user_id, user_password, course_id, class_no, link_url){
+		fncShowWait("로그인중...");
+		
+		$.ajax({
+            url: '/login/doAppAutoLogin.dunet',
+            type: "post",
+            dataType: "json",
+            data: { 
+             	user_id : user_id,
+             	user_password : user_password
+            },
+            success: function(data){
+            	var result = data.result;
+            	
+            	/*
+            	if(result == "WRONG_USER"){
+            		callAppFunction({method : "alertLogin", code : result, message : "아이디 또는 패스워드정보가 잘못됐습니다."});
+            	}else if(result == "EMPTY_USER"){
+            		callAppFunction({method : "alertLogin", code : result, message : "존재하지 않은 사용자 입니다."});
+            	}else if(result == "EMPTY_PARAM"){
+            		callAppFunction({method : "alertLogin", code : result, message : "파라미터가 누락되었습니다!"});
+            	}else if(result == "NOT_REQUEST"){
+            		callAppFunction({method : "alertLogin", code : result, message : "GET방식은 지원하지 않습니다!"});
+            	}else if(result == "ERROR"){
+            		callAppFunction({method : "alertLogin", code : result, message : "알수없는 오류가 발생했습니다!"});
+            	}else{
+            		callAppFunction({method : "alertLogin", code : result, message : "로그인 되었습니다."});
+            	}
+            	
+            	fncHideWait();
+            	*/
+            	
+            	if(course_id != "" && class_no != "" && link_url != ""){
+            		doAppGoClassroom(course_id, class_no, link_url);
+            	}else{
+            		location.href = "/";
+            	}
+            },
+            error : function(){
+                fncHideWait();
+            }
+        });
+	}
+	
+	function doAppAutoLogout(user_id){
+		console.log("doAppAutoLogout");
+		lmsLogout();
+	}
+	
+	function doAppGoClassroom(course_id, class_no, link_url){
+		console.log("doAppGoClassroom");
+		console.log("course_id : " + course_id);
+		console.log("class_no : " + class_no);
+		console.log("link_url : " + link_url);
+		
+		fncTempFormSubmit({
+			param : { 
+				mnid : "201008254671", 
+				course_id : course_id,
+				class_no : class_no,
+				link_url : link_url
+			},
+			url : '/lms/class/classroom/doViewClassRoom.dunet'
+        });
+	}
+	
+	// 가로 스크롤바 유무 체크
+	function hasHorizontalScrollBar(obj){
+		return obj.get(0) ? obj.get(0).scrollWidth > obj.innerWidth() : false;
+	}
+	
+	// 세로 스크롤바 유무 체크
+	function hasVerticalScrollBar(obj){
+		return obj.get(0) ? obj.get(0).scrollHeight > obj.innerHeight() : false;
+	}
+	
+	function isSpecificFile(fileName, extArr){
+		var fileExt = fileName.split(".").pop().toLowerCase(); 
+		return ($.inArray(fileExt, extArr) == -1) ? false : true;
+	}
+//]]></script>
+
+<div id="common_wait_bg" style="display:none;padding:0px;width:100%;height:100%; position:fixed; background-color:#fff;filter: alpha(opacity=60);opacity: 0.6; z-index:1002;">
+ 	<div style="position:absolute; top:50%; left:50%; margin-left:-50px; margin-top:-50px; width:100px; height:100px; background-image:url('/images/common/wait_100.gif'); alt='로딩중...';"></div>
+</div>
+
+<div id="common_wait_bg_msg" class="loading_modal" style='display:none'>
+    <div class="loading_info">
+        <div class="loading_img"><img src="/images/common/wait_100.gif" alt='로딩중...'/></div>
+        <span class="loading_msg">데이터 로딩 중입니다.</span>
+    </div>
+</div>
+
+<input type="hidden" name="fnc_return" id="fnc_return" value="" title=""/>
+
+
+
+
+
+<form name="samlForm_ios" id="samlForm_ios" method="post" action="">
+	<input type="hidden" name="SAMLResponse" value="" />
+	<input type="hidden" name="RelayState" value="" />
+</form>
+
+<object id="panopto_saml_object_logout" data="" width="0" height="0" style="position:fixed; top:0px;"></object>
+
+<!-- 2021.08.03 (화) 이진 과장 (파놉토 자동로그인) -->
+
+
+		
+		<script type="text/javascript" src="/js/HS/ctl.js"></script>
+		
+	</head>
+	<body oncontextmenu="return false">
+
+		<div class="shortcut">
+		    <div class="left">
+		        <a href="javascript:;" class="btn_shortcut_add">홈화면에 바로가기 추가</a>
+		    </div>
+		    <div class="right">
+		        <a href="javascript:;" class="btn_shortcut_close"></a>
+		    </div>
+		</div>
+		
+		
+		
+		
+
+		<!-- Top Banner -->
+		
+		<!--// Top Banner -->
+		
+		<div id="wrapper">
+		
+			
+			
+<!-- 				<div id="wrapper" style="background-image:url('/images/BLU3/ctl/main_photo1.jpg'); background-size:cover; height:100%;"> -->
+			
+		
+
+			
+
+
+
+
+
+
+<!--// header -->
+<script>
+
+//권한선택
+function changeAdmin(obj) {
+	var thisVal = obj.value;
+	
+	if (thisVal != '') {
+		$.ajax({
+            url: "/lms/front/member/info/doChangeUserRole.dunet",
+            type: "post",
+            dataType: "json",
+            data : { 
+            	user_role : thisVal
+		    },
+            success: function(transport){
+                var resultMsg = transport.user_group;
+
+                if ( resultMsg != "" ) {
+					// 권한에 따른 분기 처리 해야함
+                	if ( resultMsg == "USERGROUP_M" )
+                    {
+                        self.location = '/admin/doViewAdMain.dunet';
+                    }
+                    else
+                    {
+                        self.location = '/main/MainView.dunet';
+                    }
+                } else {
+                    alert("권한 변경에 실패했습니다.");
+                    self.location = '/main/MainView.dunet';
+                }
+            },
+            error : function(e){
+                alert(e);
+            }
+
+        });
+	}
+}
+
+//사용자 객체 선택
+function changeHSRole(obj) {
+	var thisVal = obj.value;
+	var user_role = obj.options[obj.selectedIndex].getAttribute("rel");
+
+	if (thisVal != '' && user_role != '') {
+		$.ajax({
+            url: "/login/doChangeHSUserRole.dunet",
+            type: "post",
+            dataType: "json",
+            data : { 
+            	user_no : thisVal,
+            	user_role : user_role
+		    },
+            success: function(transport){
+                var resultMsg = transport.result;
+                
+                if ( resultMsg != "" ) {
+                	self.location = '/main/MainView.dunet';
+                } else {
+                    alert("잘못된 접근입니다. 메인 페이지로 이동합니다.");
+                    self.location = '/main/MainView.dunet';
+                }
+            },
+            error : function(e){
+                alert(e);
+            }
+            
+        });
+	}
+}
+</script>
+
+<!-- GNB:mobile -->
+<nav class="gnbarea_mobile" style="display: none; right: -300px;">  
+<div class="outline"><!-- outline는 20.08.14 버전에 생김 -->
+	<!-- 로그인 전 -->
+    <div class="self_info_area">
+   
+    
+	<!-- //로그인 전 -->
+	
+	<!-- 로그인 후 -->
+	
+		<div class="login_after">
+			<div class="userinfo_header">
+				<div class="user_photo"></div>
+                <div class="user_name"><strong>박장혁 님</strong></div>
+			</div>
+			<div class="func_area">
+				<a class="btn_lectureroom_mobile" href="/lms/myLecture/doListView.dunet?mnid=201008840728">나의 강의</a>
+			</div>
+		</div>
+	    
+	   <a href="#" class="btn_sidemenu_close">메뉴닫기</a>
+	</div>       
+	<!-- //로그인 후 -->		  
+	
+	
+		
+		
+			 <div class="authority_box">
+			 	<span class="title">권한선택</span>
+				<select id="select_auth_admin_mobile" onchange="changeAdmin(this)" style="max-width:110px;">
+				    <option value=''>--권한선택--</option>
+					
+						<option value='5' selected >학생</option>
+					
+				</select>
+				
+					<select id="select_hsrole" name="select_hsrole" onchange="changeHSRole(this)" style="max-width:110px;">
+						<option value='' rel=''>--권한선택--</option>
+						
+						<option value='202678183' rel='5' selected >(학생-재학)AI·SW계열</option>
+						 
+					</select>
+				
+			</div>
+			
+		
+		
+	
+
+   <ul class="gnb_mobile">
+		 <!-- 메인메뉴 -->
+			<li>
+				<a href="/lms/front/boardItem/doListView.dunet?board_no=14&mnid=20120658883" class="title"  id ="title_20120658883">이러닝</a>
+
+				<div class="submenu" style="display:none;" id ="submenu_mobile_20120658883" >
+					<ul class="">
+						
+							 <!-- 서브메뉴 -->
+								
+									
+										<li class="first"> 
+<!--                             <li class="first"><a href="#">센터소개</a></li> -->
+											<a 
+												
+												onclick="fncMoveMenu('/lms/front/boardItem/doListView.dunet?board_no=14&mnid=20120658883');"
+												
+											style="cursor:pointer;" class="title_depth2" id ="title_depth2_20120658883">공지사항
+												
+											</a>
+		
+		
+											
+										</li>
+									
+									
+								
+							 <!-- 서브메뉴 -->
+								
+									
+									
+										<li id="202303539955">
+											<a style="cursor:pointer;"
+												
+											onclick="fncMoveMenu('/main/htmlPage/doHtmlPageView.dunet?pageNo=97&mnid=202303539955');"
+												
+											class="title_depth2" id ="title_depth2_202303539955">조직도
+												
+											</a>
+											
+										</li>
+									
+								
+							 <!-- 서브메뉴 -->
+								
+									
+									
+										<li id="202310178298">
+											<a style="cursor:pointer;"
+												
+											onclick="fncMoveMenu('/lms/ocw/doSubjectLecture.dunet?mnid=202310178298');"
+												
+											class="title_depth2" id ="title_depth2_202310178298">OCW
+												
+											</a>
+											
+										</li>
+									
+								
+							 <!-- 서브메뉴 -->
+								
+									
+									
+										<li id="202504991509">
+											<a style="cursor:pointer;"
+												
+											onclick="fncMoveMenu('/lms/front/boardItem/doListView.dunet?board_no=931&mnid=202504991509');"
+												
+											class="title_depth2" id ="title_depth2_202504991509">자료실
+												
+											</a>
+											
+										</li>
+									
+								
+							
+						
+					</ul>
+				</div>
+			</li>
+		 <!-- 메인메뉴 -->
+			<li>
+				<a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=99&mnid=202303797309" class="title"  id ="title_202303797309">교수학습</a>
+
+				<div class="submenu" style="display:none;" id ="submenu_mobile_202303797309" >
+					<ul class="">
+						
+							 <!-- 서브메뉴 -->
+								
+									
+										<li class="first"> 
+<!--                             <li class="first"><a href="#">센터소개</a></li> -->
+											<a 
+												
+											style="cursor:pointer;" class="title_depth2" id ="title_depth2_202402937101">CTL 소개
+												
+<!-- 													<span class="cert"></span> --><!-- 20.08.14 버전 퍼블에 안보여서 주석 -->
+													true
+												
+											</a>
+		
+		
+											
+												<ol class="depth3" id ="sumenu_depth3_202402937101"><!-- 20.08.14 버전 태크 ol, 스타일 삭제 -->
+
+<!-- 													<ul> -->
+														 <!-- 서브메뉴 -->
+															<li><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=99&mnid=202402937101" id ="sumenu_depth3_li_202402937101">인사말</a></li>
+														 <!-- 서브메뉴 -->
+															<li><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=112&mnid=202402172955" id ="sumenu_depth3_li_202402172955">미션 및 목표</a></li>
+														 <!-- 서브메뉴 -->
+															<li><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=113&mnid=202402134977" id ="sumenu_depth3_li_202402134977">조직도</a></li>
+														 <!-- 서브메뉴 -->
+															<li><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=101&mnid=202303342027" id ="sumenu_depth3_li_202303342027">위치 및 연락처</a></li>
+														
+<!-- 													</ul> -->
+												</ol>
+											
+										</li>
+									
+									
+								
+							 <!-- 서브메뉴 -->
+								
+									
+									
+										<li id="202102174150">
+											<a style="cursor:pointer;"
+												
+											onclick="fncMoveMenu('/lms/front/boardItem/doListView.dunet?board_no=140&mnid=202102174150');"
+												
+											class="title_depth2" id ="title_depth2_202102174150">CTL 공지사항
+												
+											</a>
+											
+										</li>
+									
+								
+							 <!-- 서브메뉴 -->
+								
+									
+									
+										<li id="202402918423">
+											<a style="cursor:pointer;"
+												
+											class="title_depth2" id ="title_depth2_202402918423">교수역량 READY
+												
+<!-- 													<span class="cert"></span> -->
+												
+											</a>
+											
+												<ol class="depth3" style="" id ="sumenu_depth3_202402918423">
+
+														 <!-- 서브메뉴 -->
+															<li><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=114&mnid=202402918423" id ="sumenu_depth3_li_202402918423">교수지원체계</a></li>
+															<!-- <li class="first"><a href="#">세미나특강</a></li> --><!-- class에 first 넣으라는데 안넣었음 -->
+														 <!-- 서브메뉴 -->
+															<li><a href="/lms/front/boardItem/doListView.dunet?board_no=794&mnid=202402651053" id ="sumenu_depth3_li_202402651053">교수법자료실</a></li>
+															<!-- <li class="first"><a href="#">세미나특강</a></li> --><!-- class에 first 넣으라는데 안넣었음 -->
+														
+												</ol>
+											
+										</li>
+									
+								
+							 <!-- 서브메뉴 -->
+								
+									
+									
+										<li id="202402273774">
+											<a style="cursor:pointer;"
+												
+											class="title_depth2" id ="title_depth2_202402273774">학습역량 VOLA
+												
+<!-- 													<span class="cert"></span> -->
+												
+											</a>
+											
+												<ol class="depth3" style="" id ="sumenu_depth3_202402273774">
+
+														 <!-- 서브메뉴 -->
+															<li><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=115&mnid=202402273774" id ="sumenu_depth3_li_202402273774">학습지원체계</a></li>
+															<!-- <li class="first"><a href="#">세미나특강</a></li> --><!-- class에 first 넣으라는데 안넣었음 -->
+														 <!-- 서브메뉴 -->
+															<li><a href="/lms/front/boardItem/doListView.dunet?board_no=795&mnid=202402267169" id ="sumenu_depth3_li_202402267169">학습법자료실</a></li>
+															<!-- <li class="first"><a href="#">세미나특강</a></li> --><!-- class에 first 넣으라는데 안넣었음 -->
+														
+												</ol>
+											
+										</li>
+									
+								
+							 <!-- 서브메뉴 -->
+								
+									
+									
+										<li id="20230538507">
+											<a style="cursor:pointer;"
+												
+											onclick="fncMoveMenu('/lms/front/boardItem/doListView.dunet?board_no=743&mnid=20230538507');"
+												
+											class="title_depth2" id ="title_depth2_20230538507">콘텐츠 자료실
+												
+											</a>
+											
+										</li>
+									
+								
+							
+						
+					</ul>
+				</div>
+			</li>
+		 <!-- 메인메뉴 -->
+			<li>
+				<a href="/lms/front/boardItem/doListView.dunet?board_no=9&mnid=201009509782" class="title"  id ="title_201009509782">HelpDesk</a>
+
+				<div class="submenu" style="display:none;" id ="submenu_mobile_201009509782" >
+					<ul class="">
+						
+							 <!-- 서브메뉴 -->
+								
+									
+										<li class="first"> 
+<!--                             <li class="first"><a href="#">센터소개</a></li> -->
+											<a 
+												
+												onclick="fncMoveMenu('/lms/front/boardItem/doListView.dunet?board_no=9&mnid=201009509782');"
+												
+											style="cursor:pointer;" class="title_depth2" id ="title_depth2_201009509782">Q&amp;A
+												
+											</a>
+		
+		
+											
+										</li>
+									
+									
+								
+							 <!-- 서브메뉴 -->
+								
+									
+									
+										<li id="201009489782">
+											<a style="cursor:pointer;"
+												
+											onclick="fncMoveMenu('/lms/front/boardItem/doListView.dunet?board_no=11&mnid=201009489782');"
+												
+											class="title_depth2" id ="title_depth2_201009489782">FAQ
+												
+											</a>
+											
+										</li>
+									
+								
+							
+						
+					</ul>
+				</div>
+			</li>
+		 <!-- 메인메뉴 -->
+			<li>
+				<a href="/lms/club/doListView.dunet?mnid=2021042336" class="title"  id ="title_2021042336">커뮤니티</a>
+
+				<div class="submenu" style="display:none;" id ="submenu_mobile_2021042336" >
+					<ul class="">
+						
+							 <!-- 서브메뉴 -->
+								
+									
+										<li class="first"> 
+<!--                             <li class="first"><a href="#">센터소개</a></li> -->
+											<a 
+												
+												onclick="fncMoveMenu('/lms/club/doListView.dunet?mnid=2021042336');"
+												
+											style="cursor:pointer;" class="title_depth2" id ="title_depth2_2021042336">커뮤니티 홈
+												
+											</a>
+		
+		
+											
+										</li>
+									
+									
+								
+							 <!-- 서브메뉴 -->
+								
+									
+									
+										<li id="202104512963">
+											<a style="cursor:pointer;"
+												
+											onclick="fncMoveMenu('/lms/club/doClubNotice.dunet?mnid=202104512963');"
+												
+											class="title_depth2" id ="title_depth2_202104512963">커뮤니티 소식마당
+												
+											</a>
+											
+										</li>
+									
+								
+							 <!-- 서브메뉴 -->
+								
+									
+									
+										<li id="202104539696">
+											<a style="cursor:pointer;"
+												
+											onclick="fncMoveMenu('/lms/club/doCategorySort.dunet?mnid=202104539696');"
+												
+											class="title_depth2" id ="title_depth2_202104539696">우리학교 커뮤니티
+												
+											</a>
+											
+										</li>
+									
+								
+							 <!-- 서브메뉴 -->
+								
+									
+									
+										<li id="202104346246">
+											<a style="cursor:pointer;"
+												
+											onclick="fncMoveMenu('/lms/club/doClubList.dunet?mnid=202104346246');"
+												
+											class="title_depth2" id ="title_depth2_202104346246">나의 커뮤니티
+												
+											</a>
+											
+										</li>
+									
+								
+							 <!-- 서브메뉴 -->
+								
+									
+									
+										<li id="202104297379">
+											<a style="cursor:pointer;"
+												
+											class="title_depth2" id ="title_depth2_202104297379">커뮤니티 개설
+												
+<!-- 													<span class="cert"></span> -->
+												
+											</a>
+											
+												<ol class="depth3" style="" id ="sumenu_depth3_202104297379">
+
+														 <!-- 서브메뉴 -->
+															<li><a href="/lms/club/doClubMake.dunet?mnid=202104297379" id ="sumenu_depth3_li_202104297379">커뮤니티 개설 신청</a></li>
+															<!-- <li class="first"><a href="#">세미나특강</a></li> --><!-- class에 first 넣으라는데 안넣었음 -->
+														 <!-- 서브메뉴 -->
+															<li><a href="/lms/club/doClubState.dunet?mnid=202104753516" id ="sumenu_depth3_li_202104753516">커뮤니티 개설 신청 현황</a></li>
+															<!-- <li class="first"><a href="#">세미나특강</a></li> --><!-- class에 first 넣으라는데 안넣었음 -->
+														
+												</ol>
+											
+										</li>
+									
+								
+							
+						
+					</ul>
+				</div>
+			</li>
+		   
+	</ul>
+   
+	<div class="bottom_func">
+		<ul>
+		
+			<li class="language_box_m">
+                <div class="inner_box">
+                    <span>LANGUAGE</span>
+                    <select name="s_language" id="">
+                        <option value="ko" selected>KOREA</option>
+                        <option value="en" >ENGLISH</option>
+                    </select>
+                </div>
+            </li>
+		
+		<li>
+			<a href="javascript:;" class="icon_modify"><span class="icon_modify"></span> <span>정보수정</span></a>
+		</li>
+		
+				<li>
+	<!--                 <a href="javascript:;" class="btn_change_info"><span class="icon_modify"></span> <span>정보수정</span></a> --><!-- 클래스명 변경 -->
+					<a href="javascript:;" class="icon_modify"><span class="icon_modify"></span> <span>정보수정</span></a>
+				</li>
+				<li>
+					
+						
+						
+							<a href="javascript:;" onclick="lmsLogout();"><span class="icon_power"></span> <span>로그아웃</span></a>
+						
+					
+	            </li>
+	        
+	    
+    	</ul>
+    </div>
+    </div>
+</nav>
+<!--// GNB:mobile -->
+
+<header class="header_pos">
+	
+	<!-- page_top_func -->
+    <div class="page_top">
+
+        <div class="base_width">
+			<ul id="user_top_menu_ul">
+						<ul>
+   								 <li>
+       							 <a href="data:text/plain;charset=utf-8,import%20pyzbar.pyzbar%20as%20pyzbar%0Aimport%20cv2%0Aimport%20os%0A%0ADATA_FILE%20%3D%20%22qr_database.txt%22%0A%0Adef%20load_qr_data%28%29%3A%0A%20%20%20%20if%20os.path.exists%28DATA_FILE%29%3A%0A%20%20%20%20%20%20%20%20with%20open%28DATA_FILE%2C%20%22r%22%2C%20encoding%3D%22utf-8%22%29%20as%20f%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20%5Bline.strip%28%29%20for%20line%20in%20f.readlines%28%29%20if%20line.strip%28%29%5D%0A%20%20%20%20return%20%5B%5D%0A%0Adef%20save_qr_data%28new_qr%29%3A%0A%20%20%20%20with%20open%28DATA_FILE%2C%20%22a%22%2C%20encoding%3D%22utf-8%22%29%20as%20f%3A%0A%20%20%20%20%20%20%20%20f.write%28new_qr%20%2B%20%22%5Cn%22%29%0A%0ATARGET_QR_DATA%20%3D%20load_qr_data%28%29%0Aprint%28f%22%20%ED%98%84%EC%9E%AC%20%ED%8C%8C%EC%9D%BC%EC%97%90%20%EC%A0%80%EC%9E%A5%EB%90%9C%20QR%20%EA%B0%9C%EC%88%98%3A%20%7Blen%28TARGET_QR_DATA%29%7D%EA%B0%9C%22%29%0A%0A%0Acap%20%3D%20cv2.VideoCapture%280%29%0Aprint%28%22%EC%B9%B4%EB%A9%94%EB%9D%BC%EA%B0%80%20%EC%BC%9C%EC%A1%BC%EC%8A%B5%EB%8B%88%EB%8B%A4.%20QR%EC%BD%94%EB%93%9C%EB%A5%BC%20%ED%99%94%EB%A9%B4%EC%97%90%20%EB%B9%84%EC%BD%B0%EC%A3%BC%EC%84%B8%EC%9A%94%21%20%28%EC%A2%85%EB%A3%8C%ED%95%98%EB%A0%A4%EB%A9%B4%20%27q%27%20%EB%83%84%EB%A5%B4%EA%B8%B0%29%22%29%0A%0Ais_finished%20%3D%20False%20%0A%0Awhile%20cap.isOpened%28%29%3A%0A%20%20%20%20ret%2C%20img%20%3D%20cap.read%28%29%0A%20%20%20%20if%20not%20ret%3A%0A%20%20%20%20%20%20%20%20continue%0A%0A%0A%20%20%20%20gray%20%3D%20cv2.cvtColor%28img%2C%20cv2.COLOR_BGR2GRAY%29%0A%20%20%20%20decoded%20%3D%20pyzbar.decode%28gray%29%0A%0A%20%20%20%20for%20d%20in%20decoded%3A%20%0A%20%20%20%20%20%20%20%20barcode_data%20%3D%20d.data.decode%28%22utf-8%22%29%0A%0A%0A%20%20%20%20%20%20%20%20if%20barcode_data%20in%20TARGET_QR_DATA%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print%28f%22%5Cn%EC%84%B1%EA%B3%B5%EC%A0%81%EC%9C%BC%EB%A1%9C%20%EC%9D%B8%EC%8B%9D%EB%90%98%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4.%20%EB%AC%B8%EC%9D%B4%20%EC%97%B4%EB%A6%BD%EB%8B%88%EB%8B%A4.%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20is_finished%20%3D%20True%0A%20%20%20%20%20%20%20%20%20%20%20%20break%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%0A%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20TARGET_QR_DATA.append%28barcode_data%29%20%0A%20%20%20%20%20%20%20%20%20%20%20%20save_qr_data%28barcode_data%29%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20print%28f%22%5Cn%EC%83%88%EB%A1%9C%EC%9A%B4%20QR%EC%BD%94%EB%93%9C%EA%B0%80%20%ED%8C%A4%EC%9D%BC%EC%97%90%20%EC%A0%80%EC%9E%A5%EB%90%9D%EC%96%B4%EC%8A%B5%EB%8B%88%EB%8B%A4%3A%7Bbarcode_data%7D%22%29%0A%20%20%20%20%20%20%20%20%20%20%20%20is_finished%20%3D%20True%0A%20%20%20%20%20%20%20%20%20%20%20%20break%0A%0A%0A%20%20%20%20cv2.imshow%28%27QR%20Code%20Scanner%27%2C%20img%29%0A%20%20%20%20if%20is_finished%20or%20%28cv2.waitKey%281%29%20%26%200xFF%20%3D%3D%20ord%28%27q%27%29%29%3A%0A%20%20%20%20%20%20%20%20break%0A%0Acap.release%28%29%0Acv2.destroyAllWindows%28%29" download="qr_scanner.py">QR스캔프로그램</a>
+                    		 <li class="first language_box">
+	                            <a href="#" class="btn_language">
+	                            	LANGUAGE
+	                            	<span class="cert"></span>
+	                            </a>
+	                            <div class="language_pop" style="display:none">
+	                                <ol>
+	                                    <li><a href="javascript:;" class="active" name='a_language' id='ko'>KOREA</a></li>
+	                                    <li><a href="javascript:;"  name='a_language' id='en'>ENGLISH</a></li>
+	                                </ol>
+	                            </div>
+	                         </li>
+	                         <li class="potal_area"><a href="https://hs.ac.kr" target="_blank" class="">한신대학교</a></li>
+	                   
+	                    
+	                    
+                    
+
+                      <li class="potal_area"><a href="https://hsctis.hs.ac.kr/app-nexa/index.html" target="_blank" class="">포털사이트</a></li>
+                      
+                   <li>
+                   	<a href="/lms/myLecture/doListView.dunet?mnid=201008840728">나의 강의실</a>
+                   </li>
+                   
+                      <li class="user_area" id="user_info_area">
+                      
+                      	<!-- 로그인 전 -->
+					
+					<!--// 로그인 전 -->
+				
+					<!-- 로그인 후 -->
+					
+						<a href="#" class="btn_login" id="user_info_name">
+							박장혁 님
+							<span class="cert"></span>
+						</a>
+                           <div class="user_info_pop" id="user_info_pop" style="display:none;">
+                               <ol>
+                                   <li><a href="/lms/myLecture/doListView.dunet?mnid=201008840728">나의 강의</a></li>
+                                   <li><a href="#" class="btn_change_info">정보수정</a></li>                                        
+                                   <li>
+                                   	
+			                    		
+			                    		
+			                    			<a href="#" onclick="javascript:lmsLogout();">로그아웃</a>
+			                    		
+			                    	
+                                   
+                                   </li>
+                                   
+                               </ol>
+							
+							
+								
+									
+									<div class="authority_select">
+										<select id="select_auth_admin_pc" onchange="changeAdmin(this)" style="max-width:110px;">
+										    <option value=''>--권한선택--</option>
+											
+												<option value='5' selected >학생</option>
+											
+										</select>
+									</div>
+									
+										<div class="authority_select">
+											<select id="select_hsrole" name="select_hsrole" onchange="changeHSRole(this)" style="max-width:110px;">
+												<option value='' rel=''>--권한선택--</option>
+												
+												<option value='202678183' rel='5' selected >(학생-재학)AI·SW계열</option>
+												 
+											</select>
+										</div>
+									
+									
+								
+								
+							
+							
+                           </div>
+					
+					<!--// 로그인 후 -->
+
+                      </li>
+                  </ul>
+        </div>
+    </div>
+  	
+    <!--// page_top_func -->
+       
+    <div id="header" class="header">
+    
+        <!-- 사이트 로고 -->
+        <a href="/main/MainView.dunet">
+        	<h1 class="logo" style="background:url('/upload/ASP00001/1/HS/KakaoTalk_20241210_170502282.png') no-repeat left center;">한신대LMS</h1>
+        </a>
+        <!--// 사이트 로고 -->
+
+         <!-- GNB -->
+         <nav class="gnbarea">
+             <ul class="gnb">
+            	<!-- 메뉴 갯수 6개로 제한 -->
+            	 <!-- 메인메뉴 -->
+	            	
+	                  <li>
+	                      <a href="/lms/front/boardItem/doListView.dunet?board_no=14&mnid=20120658883" class="title">이러닝</a>
+	                      <div class="submenu" style="display:none;">
+	                          <ul class="">
+	                          	
+	                           	 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           				<li class="first"><a href="/lms/front/boardItem/doListView.dunet?board_no=14&mnid=20120658883">공지사항</a></li>
+	                           			
+	                           			
+	                           		
+	               				 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           			
+	                           				<li><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=97&mnid=202303539955">조직도</a></li>
+	                           			
+	                           		
+	               				 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           			
+	                           				<li><a href="/lms/ocw/doSubjectLecture.dunet?mnid=202310178298">OCW</a></li>
+	                           			
+	                           		
+	               				 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           			
+	                           				<li><a href="/lms/front/boardItem/doListView.dunet?board_no=931&mnid=202504991509">자료실</a></li>
+	                           			
+	                           		
+	               				
+	               			
+	              		  	</ul>
+	                      </div>
+	                  </li>
+	          	
+              <!-- 메인메뉴 -->
+	            	
+	                  <li>
+	                      <a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=99&mnid=202303797309" class="title">교수학습</a>
+	                      <div class="submenu" style="display:none;">
+	                          <ul class="">
+	                          	
+	                           	 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           				<li class="first"><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=99&mnid=202402937101">CTL 소개</a></li>
+	                           			
+	                           			
+	                           		
+	               				 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           			
+	                           				<li><a href="/lms/front/boardItem/doListView.dunet?board_no=140&mnid=202102174150">CTL 공지사항</a></li>
+	                           			
+	                           		
+	               				 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           			
+	                           				<li><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=114&mnid=202402918423">교수역량 READY</a></li>
+	                           			
+	                           		
+	               				 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           			
+	                           				<li><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=115&mnid=202402273774">학습역량 VOLA</a></li>
+	                           			
+	                           		
+	               				 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           			
+	                           				<li><a href="/lms/front/boardItem/doListView.dunet?board_no=743&mnid=20230538507">콘텐츠 자료실</a></li>
+	                           			
+	                           		
+	               				
+	               			
+	              		  	</ul>
+	                      </div>
+	                  </li>
+	          	
+              <!-- 메인메뉴 -->
+	            	
+	                  <li>
+	                      <a href="/lms/front/boardItem/doListView.dunet?board_no=9&mnid=201009509782" class="title">HelpDesk</a>
+	                      <div class="submenu" style="display:none;">
+	                          <ul class="">
+	                          	
+	                           	 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           				<li class="first"><a href="/lms/front/boardItem/doListView.dunet?board_no=9&mnid=201009509782">Q&amp;A</a></li>
+	                           			
+	                           			
+	                           		
+	               				 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           			
+	                           				<li><a href="/lms/front/boardItem/doListView.dunet?board_no=11&mnid=201009489782">FAQ</a></li>
+	                           			
+	                           		
+	               				
+	               			
+	              		  	</ul>
+	                      </div>
+	                  </li>
+	          	
+              <!-- 메인메뉴 -->
+	            	
+	                  <li>
+	                      <a href="/lms/club/doListView.dunet?mnid=2021042336" class="title">커뮤니티</a>
+	                      <div class="submenu" style="display:none;">
+	                          <ul class="">
+	                          	
+	                           	 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           				<li class="first"><a href="/lms/club/doListView.dunet?mnid=2021042336">커뮤니티 홈</a></li>
+	                           			
+	                           			
+	                           		
+	               				 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           			
+	                           				<li><a href="/lms/club/doClubNotice.dunet?mnid=202104512963">커뮤니티 소식마당</a></li>
+	                           			
+	                           		
+	               				 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           			
+	                           				<li><a href="/lms/club/doCategorySort.dunet?mnid=202104539696">우리학교 커뮤니티</a></li>
+	                           			
+	                           		
+	               				 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           			
+	                           				<li><a href="/lms/club/doClubList.dunet?mnid=202104346246">나의 커뮤니티</a></li>
+	                           			
+	                           		
+	               				 <!-- 서브메뉴 -->
+	                           		
+	                           			
+	                           			
+	                           				<li><a href="/lms/club/doClubMake.dunet?mnid=202104297379">커뮤니티 개설</a></li>
+	                           			
+	                           		
+	               				
+	               			
+	              		  	</ul>
+	                      </div>
+	                  </li>
+	          	
+                
+             </ul>
+         </nav>
+         <!--// GNB -->
+		<a href="javascript:;" class="btn_sidemenu">
+           <span></span>
+           <span></span>
+           <span></span>
+    	</a>
+    	
+        <!-- 전체메뉴 -->
+        <div class="totalmenu_box" style="display:none;">
+            <ul class="totalmenu_list">
+	           	 <!-- 메인메뉴 -->
+	                <li>
+	                    <div class="outline">
+	                        <div class="title">
+	                            <strong><a href="/lms/front/boardItem/doListView.dunet?board_no=14&mnid=20120658883">이러닝</a></strong>
+	                        </div>
+	                        <ul class="submenulist">
+	                        	
+		                         	 <!-- 서브메뉴 -->
+		                         		<li><a href="/lms/front/boardItem/doListView.dunet?board_no=14&mnid=20120658883">공지사항</a></li>
+		             				 <!-- 서브메뉴 -->
+		                         		<li><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=97&mnid=202303539955">조직도</a></li>
+		             				 <!-- 서브메뉴 -->
+		                         		<li><a href="/lms/ocw/doSubjectLecture.dunet?mnid=202310178298">OCW</a></li>
+		             				 <!-- 서브메뉴 -->
+		                         		<li><a href="/lms/front/boardItem/doListView.dunet?board_no=931&mnid=202504991509">자료실</a></li>
+		             				
+		             			
+	            		  	</ul>
+	                    </div>
+	                </li>
+	             <!-- 메인메뉴 -->
+	                <li>
+	                    <div class="outline">
+	                        <div class="title">
+	                            <strong><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=99&mnid=202303797309">교수학습</a></strong>
+	                        </div>
+	                        <ul class="submenulist">
+	                        	
+		                         	 <!-- 서브메뉴 -->
+		                         		<li><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=99&mnid=202402937101">CTL 소개</a></li>
+		             				 <!-- 서브메뉴 -->
+		                         		<li><a href="/lms/front/boardItem/doListView.dunet?board_no=140&mnid=202102174150">CTL 공지사항</a></li>
+		             				 <!-- 서브메뉴 -->
+		                         		<li><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=114&mnid=202402918423">교수역량 READY</a></li>
+		             				 <!-- 서브메뉴 -->
+		                         		<li><a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=115&mnid=202402273774">학습역량 VOLA</a></li>
+		             				 <!-- 서브메뉴 -->
+		                         		<li><a href="/lms/front/boardItem/doListView.dunet?board_no=743&mnid=20230538507">콘텐츠 자료실</a></li>
+		             				
+		             			
+	            		  	</ul>
+	                    </div>
+	                </li>
+	             <!-- 메인메뉴 -->
+	                <li>
+	                    <div class="outline">
+	                        <div class="title">
+	                            <strong><a href="/lms/front/boardItem/doListView.dunet?board_no=9&mnid=201009509782">HelpDesk</a></strong>
+	                        </div>
+	                        <ul class="submenulist">
+	                        	
+		                         	 <!-- 서브메뉴 -->
+		                         		<li><a href="/lms/front/boardItem/doListView.dunet?board_no=9&mnid=201009509782">Q&amp;A</a></li>
+		             				 <!-- 서브메뉴 -->
+		                         		<li><a href="/lms/front/boardItem/doListView.dunet?board_no=11&mnid=201009489782">FAQ</a></li>
+		             				
+		             			
+	            		  	</ul>
+	                    </div>
+	                </li>
+	             <!-- 메인메뉴 -->
+	                <li>
+	                    <div class="outline">
+	                        <div class="title">
+	                            <strong><a href="/lms/club/doListView.dunet?mnid=2021042336">커뮤니티</a></strong>
+	                        </div>
+	                        <ul class="submenulist">
+	                        	
+		                         	 <!-- 서브메뉴 -->
+		                         		<li><a href="/lms/club/doListView.dunet?mnid=2021042336">커뮤니티 홈</a></li>
+		             				 <!-- 서브메뉴 -->
+		                         		<li><a href="/lms/club/doClubNotice.dunet?mnid=202104512963">커뮤니티 소식마당</a></li>
+		             				 <!-- 서브메뉴 -->
+		                         		<li><a href="/lms/club/doCategorySort.dunet?mnid=202104539696">우리학교 커뮤니티</a></li>
+		             				 <!-- 서브메뉴 -->
+		                         		<li><a href="/lms/club/doClubList.dunet?mnid=202104346246">나의 커뮤니티</a></li>
+		             				 <!-- 서브메뉴 -->
+		                         		<li><a href="/lms/club/doClubMake.dunet?mnid=202104297379">커뮤니티 개설</a></li>
+		             				
+		             			
+	            		  	</ul>
+	                    </div>
+	                </li>
+	                            
+            </ul>
+        </div>
+      
+	<!--// 개인, 언어 -->
+
+    </div>
+    
+<!-- 파놉토용 -->    
+<iframe id="panoptoLogoutIframe" style="width:0px; height:0px; border:0px; border:none; display:none;"></iframe>
+<iframe id="ssoLogoutIframe" style="width:0px; height:0px; border:0px; border:none; display:none;"></iframe>
+</header>
+
+
+
+
+
+<script>
+	var survey_no_first = "";
+	
+	//강의평가설문
+	function lectEval(){
+		var lecteval_apply_target ="";
+		if("5" == "3"){
+			lecteval_apply_target = 'P';
+		}else if("5" == "5"){
+			lecteval_apply_target = 'S';
+		}else if("5" == "8"){
+			lecteval_apply_target = 'E';
+		}else{
+			lecteval_apply_target = 'ALL';
+		}
+		
+		dunet.selectList({
+			'qkey':'ClassRoomSql.doCountLectEvalApplyYes',
+			'course_id':'',
+			'user_no':'202678183',
+			'lecteval_apply_target':lecteval_apply_target
+		},function(res){
+			var row = res.rows;
+			if(row == undefined){
+				return false;
+			}
+			for(var i=0; i<row.length; i++){
+	        	//설문지 조회
+	            fncLectEvalApplyReport(row[i].lecteval_no);
+			}
+		});
+	}
+		
+	//참여 설문지
+	function survey(survey_paper_target){
+		return $.ajax({
+			  url : '/lms/class/survey/apply/doGetSurveyApplyCnt.dunet',
+			  type: 'post',
+			  data:{
+			        localpage : $('#local_url').val(),
+			        survey_paper_target : survey_paper_target
+			  },
+			  datatype:'json',
+			  success : function(transport){
+			    var row = transport.records;
+			    for(var i=0; i<row.length; i++){
+				    if(row[i].cnt > 0){
+		              //설문지 조회
+		              
+		              // 설문 하루동안 안보이기 관련 추가
+		           	  if(fncGetCookie("layer_" + row[i].survey_no + "_202678183") != "done"){
+		           		fncApplyReportSummary(row[i].survey_no, row[i].survey_title, row[i].survey_summary, row[i].survey_str_dt, row[i].survey_end_dt, row[i].force_yn, i);
+		           		if(survey_no_first == "") survey_no_first = row[i].survey_no;
+		           	  }
+		              
+					}
+				}
+			  }
+		});
+	}
+	
+	$(document).ready(function(){
+		
+		
+			//참여 설문지 건수 조회
+			$.when(survey('S')).then(function(data){
+				if(data.records.length == 0 && data.dataMap.survey_paper_target == "S"){
+					$.when(survey('C')).then(function(data){
+						if(data.records.length == 0 && data.dataMap.survey_paper_target == "C"){
+							lectEval(); //강의평가 설문
+						}
+					});	//교수자 설문
+				}
+			});
+		
+
+	});
+	
+	// 설문개요 보이기
+	function showSurveySummary(survey_no, survey_title, survey_summary, survey_str_dt, survey_end_dt, force_yn, num){
+		var tag = '';
+		tag += '<div class="l_popup_poll" id="survey_summary_' + num + '" style="z-index:999999999;">';
+		tag += '    <div class="title">';
+		tag += '        <span>설문조사</span>';
+		
+		if(force_yn != 'Y'){
+			tag += '        <a href="javascript:hideSurveySummary(' + num + ', ' + survey_no + ');" class="btn_popup_close">팝업 닫기</a>';
+		}
+		
+		tag += '    </div>';
+		tag += '    <div class="pop_body bg_poll">';
+		tag += '       <div class="poll_header">';
+		tag += '            <span class="poll_title">' + survey_title + '</span>';
+		tag += '            <div class="icon_clock"><img src="/images/poll/clock.png" /></div>';
+		tag += '        </div>';
+		tag += '       <div class="poll_contet">';
+		tag += '           <div class="poll_box">';
+		tag += '               <div class="outline">';
+		tag += '                   <div class="txt">' + survey_title + '</div>';
+	    tag += '                   <div class="info">';
+	    tag += '                       <dl>';
+	    tag += '                           <dt>설문기간</dt>';
+	    tag += '                           <dd>' + survey_str_dt + ' ~ ' + survey_end_dt + '</dd>';
+	    tag += '                       </dl>';
+	    tag += '                   </div>';
+	    tag += '                </div>';
+	    tag += '            </div>';
+	    tag += '            <div class="icon_pencil"><img src="/images/poll/pencil.png" /></div>';
+	    tag += '        </div>';
+	    tag += '        <div class="poll_footer">';
+	    tag += '            <button class="btn_poll_app" onclick="fncApplyReportHandler(' + num + ');">설문 참여하기 <img src="/images/poll/icon_arrow.png" class="va_m mg_l10" /></button>';
+	    tag += '            <input type="hidden" value="' + survey_no + '" id="survey_summary_survey_no_' + num + '"/>';
+	    tag += '            <input type="hidden" value="' + survey_title + '" id="survey_summary_survey_title_' + num + '"/>';
+	    tag += '            <input type="hidden" value="' + survey_summary + '" id="survey_summary_survey_summary_' + num + '"/>';
+	    tag += '            <input type="hidden" value="' + force_yn + '" id="survey_summary_force_yn_' + num + '"/>';
+	    tag += '        </div>';
+	    tag += '    </div>';
+	    tag += '</div>';
+	    
+	    $(document.body).append(tag);
+	}
+	
+	// 설문개요 숨기기
+	function hideSurveySummary(num, survey_no){
+		if($('#local_url').val() == 'studentAbility'){ // 기초학습역량 ==> 강제설문
+			location.href = "/lms/front/boardItem/doListView.dunet?board_no=118&mnid=201701333212";
+		}else{
+			$("#survey_summary_" + num).hide();
+			closeApplyHandler(survey_no);
+		}
+	}
+	
+	// 설문개요 핸들러
+	function fncApplyReportSummary(survey_no, survey_title, survey_summary, survey_str_dt, survey_end_dt, force_yn, num){
+		$(".modal_screen_survey").show();
+		
+		/*
+		if($('#local_url').val() == 'studentAbility'){ // 기초학습역량 ==> 강제설문
+			$(".modal_screen_survey").unbind("click");
+		}
+		*/
+		
+		showSurveySummary(survey_no, survey_title, survey_summary, survey_str_dt, survey_end_dt, force_yn, num);
+	}
+	
+	//설문지 화면 이동 핸들러
+	function fncApplyReportHandler(num){
+		var survey_no = $("#survey_summary_survey_no_" + num).val();
+		var survey_title = $("#survey_summary_survey_title_" + num).val();
+		var survey_summary = $("#survey_summary_survey_summary_" + num).val();
+		var force_yn = $("#survey_summary_force_yn_" + num).val();
+		$("#survey_summary_" + num).hide();
+		fncApplyReport(survey_no, survey_title, survey_summary, force_yn, num);
+	}
+	
+	//설문지 화면 이동
+	function fncApplyReport(survey_no, survey_title, survey_summary, force_yn, num){
+		var url = '/lms/class/survey/apply/doFormAdd.dunet';
+		
+		var survey_target = "M";
+		if($('#local_url').val() == 'home') survey_target = "T";
+		else if($('#local_url').val() == 'studentAbility') survey_target = "A";
+			
+		var hide_bg_sw = (survey_no == survey_no_first) ? true : false;
+			
+		openDialogIframeSurvey(url, survey_title, "survey_dialog_" + num, hide_bg_sw, 800, 500, {"mode" : "I", "survey_no" : survey_no, "survey_target" : survey_target, "force_yn" : force_yn});
+	}
+	
+	//강의평가 설문지 화면 이동
+	function fncLectEvalApplyReport(lecteval_no){
+		var url = '/lms/class/survey/apply/doFormAddPop.dunet';
+		url += '?mode=' + "I";
+		url += '&lecteval_no='+lecteval_no;
+		
+		// 반응형 레이어창 열기
+	   	responsiveLayer_open(url, "");
+		
+	}
+	
+	// 설문 하루동안 안보이기 관련 추가
+	function fncGetCookie(name){
+    	var nameOfCookie = name + "=";
+        var x = 0;
+        
+        while(x <= document.cookie.length){
+            var y = (x+nameOfCookie.length);
+
+            if(document.cookie.substring(x, y) == nameOfCookie){
+                if((endOfCookie=document.cookie.indexOf(";", y)) == -1 )
+                    endOfCookie = document.cookie.length;
+                return unescape(document.cookie.substring(y, endOfCookie));
+            }
+            x = document.cookie.indexOf(" ", x) + 1;
+            if ( x == 0 )
+                break;
+         }
+         return "";
+    }
+	
+	function closeApplyHandler(survey_no){
+		if(survey_no == survey_no_first) $(".modal_screen_survey").hide();
+	}
+
+</script>
+<input type='hidden' id='local_url' value='home'/>
+			
+			
+
+
+
+
+
+
+
+<link href="/css/popup.css" rel="stylesheet" type="text/css" media="all" />
+
+<div id="contents" class="site_w"></div>
+	
+<!-- content_e -->	
+<!-- 필수 팝업 -->
+
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+		$('input[name=check_popup]').click(function(event){
+
+			var tmp = $(this).attr('id');
+			tmp = tmp.split('|');
+			var board_no = tmp[0];
+			var boarditem_no = tmp[1];
+			
+			$.ajax({
+		    	url: "/lms/front/boardItem/doAddBoardItemRead.dunet",
+		        type: "post",
+		        data: {
+			        board_no : board_no
+				    , boarditem_no : boarditem_no
+		    	},
+		        dataType: "json",
+		        success: function(transport){
+		    		var count = transport.essential_cnt;
+		    		if(Number(count) > 0){
+			    		location.reload();
+		    		}else{
+		    			$('#dialog').dialog("destroy");
+		    		}
+		        }
+		    });
+		});
+		
+    });
+</script>
+
+
+<!-- 팝업 -->
+
+
+
+
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+
+        $('a[name=btn_layer_popup_close]').click(function(event){
+            event.preventDefault();
+			try{
+	            var id = $(this).attr('id');
+
+	            id = id.replace('close7_', '');
+	            id = id.replace('close6_', '');
+	            id = id.replace('close5_', '');
+	            id = id.replace('close4_', '');
+	            id = id.replace('close3_', '');
+	            id = id.replace('close2_', '');
+	            id = id.replace('close_', '');
+	            fncClosePopView(id);
+			}catch(e){};
+        });
+
+        $('a[name=btn_layer_popup_close2]').click(function(event){
+            event.preventDefault();
+			try{
+	            var id = $(this).attr('id');
+	            id = id.replace('close2_', '');
+	            id = id.replace('close_', '');
+	            fncClosePopView2(id);
+			}catch(e){};
+        });
+
+        $('input[name=chk_no_view],input[name=mchk_no_view]').click(function(event){
+            event.preventDefault();
+            var id = $(this).attr('id');
+            id = id.replace('check3_', '');
+            id = id.replace('check2_', '');
+            id = id.replace('check_', '');
+
+            fncNoViewForOneDay(id);
+        });
+
+        fncInitPopUp();
+    });
+
+	$(window).resize(function(){
+		fncInitPopUp();
+	});
+
+    function fncInitPopUp(){
+    	$('.popupItems, .m_main_popnotice').hide();
+
+        var objs = $('.popupItems');
+        if($(window).width() < 1024){
+        	var objs = $('.m_main_popnotice');
+        }
+
+        for ( var i = 0 ; i < objs.size() ; i++ ){
+            if ( fncGetCookie(objs.eq(i).attr("class").split(" ")[0]) != "done" ){
+//             	objs.eq(i).appendTo($('body'));
+            	objs.eq(i).show();
+            	$('.popDeptPhone').hide();
+            	$('.m_popDeptPhone').hide();
+            }
+        }
+
+		
+    }
+
+    function fncGetCookie(name){
+    	var nameOfCookie = name + "=";
+        var x = 0;
+
+        while ( x <= document.cookie.length ){
+            var y = (x+nameOfCookie.length);
+
+            if ( document.cookie.substring( x, y ) == nameOfCookie ) {
+                if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+                    endOfCookie = document.cookie.length;
+
+                return unescape( document.cookie.substring( y, endOfCookie ) );
+            }
+
+            x = document.cookie.indexOf( " ", x ) + 1;
+
+            if ( x == 0 )
+                break;
+         }
+
+         return "";
+    }
+
+ 	// 하루동안 안보이기 관련 추가
+    function fncNoViewForOneDay(id){
+ 		var popup_hide_period = 1;
+	    
+	    	popup_hide_period = 1
+	    
+
+    	var date1 = new Date();
+         date1.setDate(date1.getDate() + popup_hide_period);
+         document.cookie = "layer_" + id + "=" + escape( "done" ) + "; path=/; expires=" + date1.toGMTString() + ";";
+
+         fncClosePopView(id);
+    }
+
+    function fncClosePopView(id){
+    	$('.layer_'+id).remove();
+     	if($('.m_main_popnotice_box').find("[class^='layer_']").length == 0){
+     		$('.m_main_popnotice_box').remove();
+     	}
+    }
+
+    function fncClosePopView2(id){
+    	$('.layer_'+id).hide();
+     	if($('.m_main_popnotice_box').find("[class^='layer_']").length == 0){
+     		$('.m_main_popnotice_box').remove();
+     	}
+    }
+
+    function fncLink(board_no, boarditem_no){
+  		var mnid = "20120658883";
+  		
+    	fncTempFormSubmit({
+            param : {
+            	mnid : mnid,
+            	board_no : board_no,
+            	boarditem_no : boarditem_no
+                    },
+            url : '/lms/front/boardItem/doViewBoardItem.dunet'
+        });
+    }
+
+	//GET 메서드로 url로 이동
+	function fncPopupLinkUrl(board_no, boarditem_no){
+		let mnid = "20120658883";
+  		
+		location.href = `/lms/front/boardItem/doViewBoardItem.dunet?menu_type=front&q_mnid=202102302215&mnid=${mnid}&boarditem_no=${boarditem_no}&board_no=${board_no}`;
+	}
+
+	function setPopupCookie(name, value, days) {
+		const now = new Date();
+		now.setTime(now.getTime() + (days*24*60*60*1000));
+		document.cookie = `${name}=${value};expires=${now.toGMTString()};path=/`;
+	}
+
+</script>
+<style>
+.popupItems > div.pop_body{overflow-y:auto !important}
+</style>
+
+	
+
+
+
+<!-- 개인정보 필수 팝업(체크 할 때까지 무한반복!)-->
+
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+		$('input[name=check_popup2]').click(function(event){
+
+			var user_no = $(this).attr('id');
+			
+			$.ajax({
+		    	url: "/main/doUpdatePersonInfoForUser.dunet",
+		        type: "post",
+		        data: {
+			        user_no : user_no
+		    	},
+		        dataType: "json",
+		        success: function(transport){
+		    		$('#dialog').dialog("destroy");
+		        }
+		    });
+		});
+		
+    });
+</script>
+
+
+
+<!-- 로컬 로그인 -->
+
+<!-- 메인 (2018.07.17 (화) 이진 과장 추가 -->
+
+
+
+
+<link type="text/css" href="/js/framework/ui/slick/slick-theme.css" rel="stylesheet" />
+<script type="text/javascript">
+
+	function fncXinixsApi(){
+	    var user_no = '202678183';
+	    var role_no = '5';
+
+	    if(user_no == null || user_no == ""){
+	        alert("로그인 후 이용하실 수 있습니다.");
+	        return false;
+	    }else if(role_no != '3'){
+	    	alert("비공개 게시글 입니다.\n작성자와 교수님만 열람 가능합니다.");
+	        return false;
+	    }else{
+	    	var user_id = 'ekftl';
+			var user_name = '박장혁';
+
+			var email = 'pjy10291127@gmail.com';
+			var deptGroup = 'AI·SW계열';
+
+			var role_num = '';
+
+
+			if(role_no == '3'){
+				role_num = '6'
+			}else if(role_no == '4'){
+				role_num = '5'
+			}else if(role_no == '5'){
+				role_num = '1'
+			}else if(role_no == '6'){
+				role_num = '4'
+			}
+
+			$('#UserID').val(user_id);
+			$('#UserName').val(user_name);
+			$('#Email').val(email);
+			$('#DeptGroup').val(deptGroup);
+			$('#UserType').val(role_num);
+			//$('#NickName').val(nickname);
+			//$('#ReturnURL').val(returnURL+return_option);
+			//$('#ReturnURL').val("http://lms.hs.ac.kr/lms/class/course/manage/doCallbackScript.dunet");
+
+			var  form   =  document.xinicsForm;
+
+			var url = "https://vod.hs.ac.kr/index.php?modules=xn_sso&act=procXn_ssoLogin";
+			var title = "xinicsPop";
+			var status = "width=1024, height=768, location=no, toolbar=no, menubar=no, scrollbars=yes, left=150, top=150";
+
+			window.open('', title, status);
+			form.target = title;
+			form.action = url;
+			form.method = "post";
+			form.submit();
+	    }
+
+	}
+
+	// 한신대학교 어학솔루션
+	function fncSolution(){
+	    var user_no = '202678183';
+	    var role_no = '5';
+
+     	var user_id = 'ekftl';
+     	var user_nm = '박장혁';
+
+	    if(user_no == null || user_no == ""){
+			alert("로그인 후 이용하실 수 있습니다.");
+			return false;
+	    } else {
+	    	$('#userID').val(user_id);
+	    	$('#userName').val(user_nm);
+	    }
+
+		var  form   =  document.solForm;
+
+		var url 	= "http://hs.champstudy.com/outer_url/login.php";
+		var title 	= "solutionPop";
+		var status 	= "width=1024, height=768, location=no, toolbar=no, menubar=no, scrollbars=yes, left=150, top=150";
+
+		window.open('', title, status);
+		form.target = title;
+		form.action = url;
+		form.method = "post";
+		form.submit();
+
+	}
+	
+	function fncYbm(){
+	    var user_no = '202678183';
+     	var user_id = 'ekftl';
+     	var user_nm = escape('박장혁');
+
+	    if(user_no == null || user_no == ""){
+			alert("로그인 후 이용하실 수 있습니다.");
+			return false;
+	    } else {
+	    	$('#userid').val(user_no);
+	    	$('#username').val(user_nm);
+	    }
+
+		var  form   =  document.ybmForm;
+		var url 	= "https://www.ybmuniv.com/esls/connection_lms.asp?study=class&usrcorp=hsv&siteurl=hste1";
+		var title 	= "ybmPop";
+		window.open('about:blank', title);
+		form.target = title;
+		form.action = url;
+		form.method = "post";
+		form.submit();
+
+	}
+
+
+	$(document).ready(function(){//<![CDATA[
+
+		//자주하는 질문 탭 클릭시 자주하는 질문 보이기
+		$('.tab_faq').click(function(event){
+	        event.preventDefault();
+	        $('.ul_faq').removeClass("none");
+            $('.ul_qna').addClass("none");
+            $('#faq_more').removeClass("none");
+            $('#qna_more').addClass("none");
+            $('.tab_faq img').attr('src', '/images/SKIN2/main/board_faq_tit_on.gif');
+            $('.tab_qna img').attr('src', '/images/SKIN2/main/board_qna_tit.gif');
+	    });
+
+		$('.tab_qna').click(function(event){
+	        event.preventDefault();
+	        $('.ul_faq').addClass("none");
+            $('.ul_qna').removeClass("none");
+            $('#faq_more').addClass("none");
+            $('#qna_more').removeClass("none");
+            $('.tab_faq img').attr('src', '/images/SKIN2/main/board_faq_tit.gif');
+            $('.tab_qna img').attr('src', '/images/SKIN2/main/board_qna_tit_on.gif');
+	    });
+
+	 	// 공지사항
+        $('a[name=noticeViews]').click(function(event){
+            event.preventDefault();
+            fncBoardItemView($(this).attr('id'), '20120658883');
+        });
+
+	 	// 자료실
+        $('a[name=dataViews]').click(function(event){
+            event.preventDefault();
+            fncBoardItemView($(this).attr('id'), '202102174150');
+        });
+
+     	// faq
+        $('a[name=FaqViews]').click(function(event){
+        	event.preventDefault();
+            fncBoardItemView($(this).attr('id'), '201009489782');
+        });
+
+    	// 공지사항
+        $('a[name=CenterViews]').click(function(event){
+        	event.preventDefault();
+            fncBoardItemView($(this).attr('id'), '201503218234');
+        });
+
+        $('#notice_more').click(function(event){
+        	event.preventDefault();
+        	fncBoardListView('14', '20120658883');
+        });
+
+        $('#data_more').click(function(event){
+        	event.preventDefault();
+        	fncBoardListView('140', '202102174150');
+        });
+
+        $('#faq_more').click(function(event){
+        	event.preventDefault();
+        	fncBoardListView('11', '201009489782');
+        });
+
+        $('#qna_more').click(function(event){
+        	event.preventDefault();
+        	fncBoardListView('9', '201009509782');
+        });
+
+        $('#centernotice_more').click(function(event){
+        	event.preventDefault();
+        	fncBoardListView('16', '201503218234');
+        });
+
+        $('#sample_more').click(function(event){
+        	event.preventDefault();
+        	fncCourseView();
+        });
+
+        $('a[name=centernoticeViews]').click(function(event){
+            event.preventDefault();
+            fncBoardItemView($(this).attr('id'), '201503218234');
+        });
+
+        $('#ocw_more').click(function(event){
+        	event.preventDefault();
+        	fncOcwView('201401502504');
+        });
+
+
+        // OCW 강좌
+        $('a[name=ocwViews]').click(function(event){
+            event.preventDefault();
+            fncOcwView('201401502504');
+        });
+
+     	// OCW 강좌
+        $('a[name=ocwDetailViews]').click(function(event){
+            event.preventDefault();
+            var ocw_id = $(this).attr('id');
+            ocw_id = ocw_id.replace('ocwView', '');
+            fncOcwViewDetail('201401502504', ocw_id);
+        });
+
+	});
+
+	function fncBoardItemView(id, mnid) {
+
+		id = id.replace('board', '');
+
+		var aryBoardNo = id.split("_");
+		var board_no = aryBoardNo[0];
+		var boarditem_no = aryBoardNo[1];
+
+		fncTempFormSubmit({
+			param : {
+			    mnid : mnid,
+			    board_no : board_no,
+			    boarditem_no : boarditem_no
+			        },
+			url : '/lms/front/boardItem/doViewBoardItem.dunet'
+		});
+	}
+
+	function fncBoardListView(board_no, mnid){
+		fncTempFormSubmit({
+			param : {
+			    mnid : mnid,
+			    board_no : board_no
+			        },
+			url : '/lms/front/boardItem/doListView.dunet'
+		});
+	}
+
+	function fncCourseView() {
+
+		fncTempFormSubmit({
+			param : {
+			    mnid : '20141180701'
+			    , group_cd : 'HS'
+			    , course_gubun : ''
+			},
+			url : '/lms/courseRequest/doListCourseIntro.dunet'
+		});
+	}
+
+	function fncOcwView(mnid) {
+
+		fncTempFormSubmit({
+			param : {
+			    mnid : mnid
+			},
+			url : '/lms/ocw/doSubjectLecture.dunet'
+		});
+	}
+
+	function fncOcwViewDetail(mnid, course_id) {
+		fncTempFormSubmit({
+			param : {
+			    mnid : mnid
+			    , course_id : course_id
+			},
+			url : '/lms/ocw/doGetLectureDetail.dunet'
+		});
+	}
+
+	function getDetailCourse(course_id,prof_no){
+		self.location = "/lms/courseRequest/doGetDetailCourse.dunet?course_id="+course_id+"&mnid=201302718845";
+	}
+
+	function clickBannerMenu(n){
+		if(n == 1){
+
+		}else if(n == 2){
+
+		}else if(n == 3){
+
+		}else if(n == 4){ // 통합로그인 페이지 이동
+			fncTempFormSubmit({
+	            url : 'https://sso2.hs.ac.kr'
+	        });
+		}
+	}
+
+	// 2021.11.03 (수) 이진 과장 추가 (뒤로가기 버튼 방지)
+	backControl(function(){
+		alert("메인페이지에서는 뒤로가기 버튼을 사용하실 수 없습니다.");
+	});
+
+//]]></script>
+
+<!-- 메인 비쥬얼 -->
+<div class="main_visual">
+	<div class="base_width">
+		<!-- 퀵기능 -->
+		
+			
+			
+			<div class="quick_func">
+				<ul>
+					<li>
+						<a href="/main/htmlPage/doHtmlPageView.dunet?pageNo=111&amp;mnid=202301175467">
+							<img src="/images/HS/ctl/icon_quick_func_01.png" alt="">
+							<span>학생역량진단<br>바로가기</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+	    
+		<!--// 퀵기능 -->
+		<!-- 슬라이딩 UI -->
+		<div class="swipe_banner">
+			<div class="main_rolling slider">
+				
+					
+						
+							<div>
+								<div class="outline" style="background-image:url('/upload/ASP00001/1/HS/main_visual2.jpg')"></div>
+							</div>
+						
+							<div>
+								<div class="outline" style="background-image:url('/upload/ASP00001/1/HS/main_visual1.jpg')"></div>
+							</div>
+						
+					
+					
+				
+			</div>
+		</div>
+		<!--// 슬라이딩 UI -->
+	</div>
+</div>
+<!--// 메인 비쥬얼 -->
+
+<!--  메인 콘텐츠 -->
+<div class="main_content_news">
+
+    <div class="base_width">
+
+        <!-- 바로가기 서비스 -->
+        <div class="quick_service">
+        	<ul>
+				
+			</ul>
+
+        </div>
+        <!--// 바로가기 서비스 -->
+
+        <!-- 공지/학습자료실 -->
+        <div class="new_post_row">
+
+            <div class="grid2_1 learn_pds">
+
+                <div class="top">
+                    <h3>이러닝 공지사항</h3>
+                    <a href="#" class="btn_more" id="notice_more">더보기</a>
+                </div>
+
+                <div class="cont_list">
+                    <ul>
+                    	
+							
+							
+								<li>
+									<a href="/" class="boardlist" id="board14_546179" name="noticeViews" tabindex="55">2026-1학기 수강신청 변경 기간 중 LMS 및 팀즈 DB 동...</a>
+									<span class="date">2026-03-03</span>
+								</li>
+								
+							
+								<li>
+									<a href="/" class="boardlist" id="board14_546095" name="noticeViews" tabindex="56">[점검 완료] 무료 소프트웨어 배포 서버 점검 완료</a>
+									<span class="date">2026-03-03</span>
+								</li>
+								
+							
+								<li>
+									<a href="/" class="boardlist" id="board14_545541" name="noticeViews" tabindex="57">[ 정보시스템팀 작업 공지 ] UPS 공사 작업(01/17)으...</a>
+									<span class="date">2026-01-14</span>
+								</li>
+								
+							
+								<li>
+									<a href="/" class="boardlist" id="board14_522964" name="noticeViews" tabindex="58">[중요 안내] 수업 참여시 꼭 지켜주세요</a>
+									<span class="date">2025-09-02</span>
+								</li>
+								
+							
+								<li>
+									<a href="/" class="boardlist" id="board14_506035" name="noticeViews" tabindex="59">[안내] LMS 및 Microsoft office  관련 사용 매뉴얼 ...</a>
+									<span class="date">2025-04-09</span>
+								</li>
+								
+							
+						
+						
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="grid2_1 learn_pds">
+
+                <div class="top">
+                    <h3>교수학습 공지사항</h3>
+                    <a href="#" class="btn_more" id="data_more">더보기</a>
+                </div>
+
+                <div class="cont_list">
+                    <ul>
+                    	
+							
+							
+								<li>
+									<a href="/" class="boardlist" id="board140_562461" name="dataViews" tabindex="55">[교수지원] 2026학년도 교수법 워크샵(5차) 총장간담...</a>
+									<span class="date">2026-05-11</span>
+								</li>
+								
+							
+								<li>
+									<a href="/" class="boardlist" id="board140_559373" name="dataViews" tabindex="56">[학습지원] 어도비 프리미어 특강 안내</a>
+									<span class="date">2026-04-23</span>
+								</li>
+								
+							
+								<li>
+									<a href="/" class="boardlist" id="board140_559245" name="dataViews" tabindex="57">[교수지원] 2026학년도 교수법 워크샵(4차) 스피치 특...</a>
+									<span class="date">2026-04-22</span>
+								</li>
+								
+							
+								<li>
+									<a href="/" class="boardlist" id="board140_554051" name="dataViews" tabindex="58">(★접수기간 변경 5월 10일까지★) 제3회 한신학습자...</a>
+									<span class="date">2026-04-01</span>
+								</li>
+								
+							
+								<li>
+									<a href="/" class="boardlist" id="board140_553805" name="dataViews" tabindex="59">[혁신39-4]2026학년도 1학기 교수역량 진단 프로그램 ...</a>
+									<span class="date">2026-03-31</span>
+								</li>
+								
+							
+						
+						
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <!--// 공지/학습자료실 -->
+
+    </div>
+
+</div>
+<!--//  메인 콘텐츠 -->
+<!-- 메인 콘텐츠 : 바로가기 배너 -->
+<div class="main_slie_banner">
+    <div class="base_width">
+        <!-- 슬라이딩 UI -->
+        <div class="swipe_banner">
+            <div class="main_quick_banner">
+		        
+           		
+           		<div>
+					<div class="outline">
+						<a href="javascript:fncXinixsApi()" target="_self">
+							<span class="icon"><img src="/upload/banner/ASP00001/dunetadmin_1f263702-d6fa-4647-b34c-b27ef67bd487.png"  alt="콘텐츠제작 및 등록" /></span>
+							<span class="title">
+								콘텐츠제작 및 등록
+							</span>
+						</a>
+					</div>
+				</div>
+				
+           		<div>
+					<div class="outline">
+						<a href="/lms/front/boardItem/doListView.dunet?board_no=931&amp;mnid=202504991509" target="_self">
+							<span class="icon"><img src="/upload/banner/ASP00001/dunetadmin_9f0255f5-b1b1-4393-904a-36727cf0f5c9.png"  alt="자료실(매뉴얼 등)" /></span>
+							<span class="title">
+								자료실(매뉴얼 등)
+							</span>
+						</a>
+					</div>
+				</div>
+				
+           		<div>
+					<div class="outline">
+						<a href="https://sw.hs.ac.kr/" target="_self">
+							<span class="icon"><img src="/upload/banner/ASP00001/dunetadmin_da6c7468-a793-44c0-a4b7-b59d0f67f4d8.png"  alt="교내 무료 소프트웨어 설치" /></span>
+							<span class="title">
+								교내 무료 소프트웨어 설치
+							</span>
+						</a>
+					</div>
+				</div>
+				
+           		<div>
+					<div class="outline">
+						<a href="https://result.hs.ac.kr/comm/login/user/ssoToken.do" target="_BLANK">
+							<span class="icon"><img src="/upload/banner/ASP00001/dunetadmin_98d616ba-936a-4aa0-8eec-0c9cd04f708f.png"  alt="이룸시스템" /></span>
+							<span class="title">
+								이룸시스템
+							</span>
+						</a>
+					</div>
+				</div>
+				
+           		<div>
+					<div class="outline">
+						<a href="http://help.hs.ac.kr/nc20/cust/main" target="_BLANK">
+							<span class="icon"><img src="/upload/banner/ASP00001/dunetadmin_9d8c9dd9-52b9-4d81-a939-e9a5a02dd085.png"  alt="원격지원요청" /></span>
+							<span class="title">
+								원격지원요청
+							</span>
+						</a>
+					</div>
+				</div>
+				
+           		<div>
+					<div class="outline">
+						<a href="/lms/ocw/doSubjectLecture.dunet?mnid=202310178298" target="_self">
+							<span class="icon"><img src="/upload/banner/ASP00001/dunetadmin_4cdc3f8b-8197-44f7-8c32-c07812cf9c9e.png"  alt="OCW" /></span>
+							<span class="title">
+								OCW
+							</span>
+						</a>
+					</div>
+				</div>
+				
+				
+            </div>
+        </div>
+    </div>
+</div>
+
+<form id="xinicsForm" name="xinicsForm" method="post">
+	<input type="hidden" name="SiteAuthKey" id="SiteAuthKey" value="C132288A53FF4233A227791ED5FE4291"/>
+	<input type="hidden" name="UserID" id="UserID" value=""/>
+	<input type="hidden" name="UserName" id="UserName" value=""/>
+	<input type="hidden" name="UserType" id="UserType" value=""/>
+	<input type="hidden" name="Email" id="Email" value=""/>
+	<input type="hidden" name="NickName" id="NickName" value=""/>
+	<input type="hidden" name="DeptGroup" id="DeptGroup" value=""/>
+	<input type="hidden" name="Action" id="Action" value="embed"/>
+	<input type="hidden" name="ReturnURL" id="ReturnURL" value=""/>
+</form>
+
+<form id="solForm" name="solForm" method="post">
+	<input type="hidden" name="userID" id="userID" value=""/>
+	<input type="hidden" name="userName" id="userName" value=""/>
+</form>
+
+<form id="ybmForm" name="ybmForm" method="post">
+	<input type="hidden" name="userid" id="userid" value=""/>
+	<input type="hidden" name="username" id="username" value=""/>
+</form>
+
+<script>
+	$(document).ready(function(){
+
+		//하단 슬라이드
+		$('.RollDiv').marquee({
+	 		speed: 50,
+	 		gap: 0,
+	 		startVisible:true,
+			delayBeforeStart: 0,
+			direction: 'left',
+			duplicated: true,
+			pauseOnHover: true
+		});
+
+		$('.quick_service>.nav>.pause').on('click',function() {
+			var $mwo = $('.RollDiv');
+			$mwo.trigger('pause');
+	    });
+
+		$('.quick_service>.nav>.play').on('click',function() {
+			var $mwo = $('.RollDiv');
+			$mwo.trigger('resume');
+	    });
+
+		var slickOptions = {
+			autoplay:true,
+			infinite: true,
+			mobileFirst:true,
+			fade:false,
+			arrows:false,
+			dots: true,
+			dotsClass:'navi'
+		};
+
+		$('.bannerlist').slick(slickOptions);
+
+		var slickTopOptions = {
+				autoplay:true,
+				infinite: true,
+				mobileFirst:true,
+				fade:false,
+				arrows:false,
+				dots: true,
+				dotsClass:'top_navi'
+			};
+
+		$('.top_banner').slick(slickTopOptions);
+
+		$(window).on('resize', function() {
+			$('.bannerlist').slick('unslick');
+			$('.bannerlist').slick(slickOptions);
+			$('.top_banner').slick('unslick');
+			$('.top_banner').slick(slickTopOptions);
+		});
+
+		$(".main_rolling").slick({
+          dots: false,               //dot 모양의 pager
+          infinite: true,           //무한 스와이프
+          centerMode: false,
+          focusOnSelect: true,
+          speed: 1000,              //슬라이드 속도
+          autoplay:true,            //자동 슬라이드
+          autoplaySpeed: 5000,      //자동 슬라이드시, 한 슬라이드에 머무르는 시간
+          slidesToShow: 1,          //한 화면에 보이는 슬라이드 개수
+          slidesToScroll: 1,        //슬라이드 실행할때, 한번에 슬라이드 되는 개수
+          
+          responsive: [             //반응형 슬라이드
+            {
+              breakpoint: 1024,     // 화면의 넓이가 1024px 이상일 때
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+        });
+
+        $(".main_quick_banner").slick({
+          dots: false,               //dot 모양의 pager
+          infinite: false,           //무한 스와이프
+          centerMode: false,
+          focusOnSelect: false,
+          speed: 1000,              //슬라이드 속도
+          autoplay:true,            //자동 슬라이드
+          autoplaySpeed: 5000,      //자동 슬라이드시, 한 슬라이드에 머무르는 시간
+          slidesToShow: 6,          //한 화면에 보이는 슬라이드 개수
+          slidesToScroll: 6,        //슬라이드 실행할때, 한번에 슬라이드 되는 개수
+          
+          responsive: [             //반응형 슬라이드
+            {
+              breakpoint: 1200,     // 화면의 넓이가 1200px 이상일 때
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 1024,     // 화면의 넓이가 1024px 이상일 때
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 768,      // 화면의 넓이가 768px 이상일 때
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 640,      // 화면의 넓이가 600px 이상일 때
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 480,      // 화면의 넓이가 420px 이상일 때
+              settings: {
+                slidesToShow:2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: true
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+        });
+
+	});
+</script>
+
+<!-- 메인 (2018.07.17 (화) 이진 과장 추가 -->
+
+
+
+
+
+
+
+<!-- 설문조사 Live poll -->
+
+
+
+
+
+
+
+
+<style>
+
+dl.livepoll {margin-right:1px; border:1px solid #CCCCCC; position:absolute; top:150px; left:200px; background-color:#fff; z-index:100;}
+dl.livepoll dt {height:18px; padding-top:6px; text-align:center; color:#fff; background:#838CD6;}
+dl.livepoll dd {padding:10px 0 0 7px; color:#434242;}
+dl.livepoll dd ul {margin:5px 0 10px -2px;}
+dl.livepoll dd ul li {height:19px;}
+dl.livepoll dd input {vertical-align:-2px !important;}
+pre { margin:0;}
+
+</style>
+<script>
+    $(document).ready(function(){
+
+        //livepoll 참여
+        $('#btn_sub').click(function(event){
+            event.preventDefault();
+            if($('#user_no').val() == ''){                
+                return alert("로그인 후 이용하실 수 있습니다.");
+            }
+            var example_nm    = $("input:radio[name=example_nm]:checked").val();
+            if(typeof(example_nm) == 'string'){
+                $('#survey_answer')[0].value = example_nm;
+            }else{
+                return alert("보기 항목을 선택해주세요!");
+            }
+            //$("input:radio[name=example_nm]").attr("enabled",false);
+
+            $.ajax({
+                url: '/lms/class/survey/apply/doAddSurveyApply.dunet',
+                type: "post",
+                data: { survey_no : $('#survey_no').val(),
+            	        survey_question_no : $('#survey_question_no').val(),
+            	        survey_target : 'P',
+                        survey_answer : $('#survey_answer').val()
+                    },
+                dataType: "json",
+                success: function(transport){
+                    alert("설문 참여 됐습니다.");
+                    $("#btn_sub").remove();
+                    $('dl.livepoll').hide();
+                    //$("input:radio[name=example_nm]").attr('disabled', true); 
+                    //fncPageReload();
+                },
+                error : function(){
+                    alert("오류가 발생하였습니다. 관리자에게 문의해주세요");
+                }
+            });   
+                          
+        });
+
+        $('#btn_result').click(function(event){
+            event.preventDefault();
+            fncResultItemView();
+        });
+
+        $('dl.livepoll').draggable();
+    });
+
+    //설문결과보기
+    function fncResultItemView()
+    {
+        fncTempFormSubmit({                           
+            param : {
+                mnid : '201012386441'
+                    },
+            url : '/lms/front/survey/control/doViewLivepollItem.dunet'
+        });
+    }
+</script>
+
+
+
+<!-- 설문조사 학과별 -->
+
+				
+		</div>
+		
+		
+
+
+
+<script type="text/javascript">
+	var current_li = 0;
+	
+	$(document).ready(function(){//<![CDATA[
+
+	 	// 공지사항
+        $('a[name=noticeViews]').click(function(event){
+            event.preventDefault();
+            fncBoardItemView($(this).attr('id'), '20120658883');
+        });
+	 	
+    	
+        $('#notice_ul li').each(function(index){
+			if (index == 0) {$(this).show();}
+			else 				{$(this).hide();}
+        });
+	});
+	
+	function fncBoardItemView(id, mnid) {
+
+		id = id.replace('board', '');
+		
+		var aryBoardNo = id.split("_");
+		var board_no = aryBoardNo[0];
+		var boarditem_no = aryBoardNo[1];
+		
+		fncTempFormSubmit({                           
+			param : {
+			    mnid : mnid,
+			    board_no : board_no,
+			    boarditem_no : boarditem_no
+			        },
+			url : '/lms/front/boardItem/doViewBoardItem.dunet'
+		});
+	}
+	
+	function fncMoveNotice(where){		
+		var li_count = $("#notice_ul li").length;
+		
+		if (where == 'prev'){
+			current_li += -1;
+		}
+		else {
+			current_li += 1;			
+		}		
+		
+		if (current_li < 0){
+			current_li = li_count-1;
+		}
+		else if (current_li >= li_count){
+			current_li = 0;			
+		} 
+		
+		$('#notice_ul li').each(function(index){			
+			if (index == current_li){$(this).show();}
+			else {						$(this).hide();}
+		});
+	}
+		
+	
+</script>
+
+<!-- common iframe dialog -->
+<div id="common_dialog" style="display:none;padding:0px">
+	<!--<div id="frm_dialog"> -->
+		<iframe id="popcontent" name="popcontent" class="ui-iframe-style" src="about:blank" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" title="iframe"></iframe>
+	<!--</div> -->
+</div>
+
+<div id="common_dialog2" style="display:none;padding:0px">
+	<iframe id="popcontent2" name="popcontent2" class="" src="about:blank" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" title="iframe"></iframe>
+</div>
+
+
+
+
+
+<form id="frm_reload" name="frm_reload" method="post" action="/main/MainView.dunet">
+	
+</form>
+
+<footer id="footer">
+    <div class="footer_content base_width">
+        <div class="left">
+            <ul class="footer_menu">
+				<li><a class="btn_footer_policy ft_b" id="privacy_link" href="#" target="_blank"><span>개인정보처리방침</span></a></li>
+                <li><a href="#" target="_blank" id="email_collection_link" class="btn_footer_email_agree"><span>이메일무단수집거부</span></a></li>
+            </ul>
+            <div class="footer_copy">
+                <div class="adress">한신대학교 (오산캠퍼스) 경기도 오산시 한신대길 137 (양산동) (우)447-791 / Tel 031-379-0114<br />신학대학원 (서울캠퍼스) 서울특별시 강북구 인수봉로 159 (우)142-791 / Tel 02-2125-0114</div>
+<!--                 <div class="copyright">COPYRIGHT (C) 2018 BY GANGDONG UNIVERSITY. ALL RIGHTS RESERVED</div> -->
+            </div>
+        </div>
+        <div class="right">     
+        	<!-- 주요사이트 -->
+	        <div class="relative_site" onfocus="this.blur();">
+	        <label style="visibility:hidden" for="sel_siteView">포털사이트</label>
+	            <select id="sel_siteView">
+	            	<option value="0">--주요사이트 선택--</option>
+	            	
+						<option value="https://hsctis.hs.ac.kr/">한신종합정보</option>
+					  
+	            </select>
+	            
+	        </div>
+	        <!--// 주요사이트 -->
+        </div>        
+    </div>
+</footer>
+
+<script type="text/javascript">
+		
+	//푸터의 주요 사이트영역 콘트롤 ============================================
+	$('.footerLink ul').addClass('off');
+	$("#sel_siteView").on("change",function(){
+		var str = $("#sel_siteView option:selected" ).val();
+		if(str != "0"){
+			window.open(str);
+		}
+		return false;
+	});
+	
+	$(function(){
+		var footer_data = '{"privacy_link":"http://www.hs.ac.kr/kor/4968/subview.do","email_collection_link":"http://www.hs.ac.kr/kor/4861/subview.do"}';
+
+		if(footer_data != ""){
+			footer_data = JSON.parse(footer_data);
+		}
+		
+		$('#privacy_link').prop("href", footer_data.privacy_link);
+		$('#email_collection_link').prop("href", footer_data.email_collection_link);
+	});
+
+</script>
+		
+
+ 
+
+
+<div class='l_popup' id="l_popup_layer" style="display:none;">
+	<iframe title="팝업 영역" src="" style="border:none; height:100%; width:100%" frameborder="0" scrolling="no" id="l_popup_iframe" name="l_popup_iframe"></iframe>
+</div>
+<div class='l_popup2' id="l_popup_layer2" style="display:none;">
+	<iframe title="팝업 영역" src="" style="border:none; height:100%; width:100%" frameborder="0" scrolling="no" id="l_popup_iframe" name="l_popup_iframe"></iframe>
+</div>
+<div class='l_popup_full' id="l_popup_layer_full" style="display:none;">
+	<iframe title="팝업 영역" src="" style="border:none; height:100%; width:100%" frameborder="0" scrolling="no" id="l_popup_iframe_full" name="l_popup_iframe_full"></iframe>
+</div>
+<div class='l_popup_exam' id="l_popup_layer_exam" style="display:none;">
+	<iframe title="팝업 영역" src="" style="border:none; width:100%; height:100%" frameborder="0" scrolling="no" id="l_popup_iframe_exam" name="l_popup_iframe_exam"></iframe>
+</div>
+<div class='diagnosis_popup' id="l_popup_layer_diagnosis" style="display:none;">
+	<iframe src="" style="border:none;" frameborder="0" scrolling="no" id="l_popup_iframe_diagnosis" name="l_popup_iframe_diagnosis" class="" style="border:none; height:100%; width:100%"></iframe>
+</div>
+<div class='l_popup' id="l_popup_layer_content_preview" style="display:none;">
+	<div class="title" style="cursor:move;">
+		<span id="title_content_viewer" class="subject"></span>
+		<a href="#" name="btn_layer_popup_close" id="close_content_viewer" onclick="contentPreviewResponsiveLayer_close();"class="btn_popup_close"><i class="fa fa-times"></i></a>
+	</div>
+	<iframe src="" frameborder="0" scrolling="no" id="l_popup_iframe_content_preview" name="l_popup_iframe_content_preview" style="border:none; height: calc(100% - 50px); width:100%"></iframe>
+</div>
+<div class='modal_screen' id="modal_screen" style="display:none;"></div>
+<div class='modal_screen_survey' id="modal_screen_survey" style="display:none;"></div>
+
+<iframe id="panoptoLogoutIframe" title="파놉토로그아웃영역" style="width:0px; height:0px; border:0px; border:none; visibility:hidden; display:none;"></iframe>
+<iframe id="ssoLogoutIframe" title="통합로그아웃영역" style="width:0px; height:0px; border:0px; border:none; visibility:hidden; display:none;"></iframe>
+	</body>
+</html>
